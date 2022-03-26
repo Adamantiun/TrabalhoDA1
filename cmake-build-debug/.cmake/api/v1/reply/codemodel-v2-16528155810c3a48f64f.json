@@ -6,10 +6,9 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.21"
+						"string" : "3.20.2"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -39,7 +38,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "TrabalhoDA1::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-TrabalhoDA1-Debug-8ff98953518e4ca2cf03.json",
+					"jsonFile" : "target-TrabalhoDA1-Debug-8c2a503aba5255cb1f3c.json",
 					"name" : "TrabalhoDA1",
 					"projectIndex" : 0
 				}
@@ -49,12 +48,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/ADAM/Desktop/DA/TrabalhoDA1/TrabalhoDA1/cmake-build-debug",
-		"source" : "D:/ADAM/Desktop/DA/TrabalhoDA1/TrabalhoDA1"
+		"build" : "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/cmake-build-debug",
+		"source" : "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 3
+		"minor" : 2
 	}
 }

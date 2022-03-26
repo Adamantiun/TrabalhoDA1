@@ -6,19 +6,17 @@
 #define PROJ1_CONTROLLER_H
 
 
-#include "Line.h"
-#include "Graph.h"
+#include "Truck.h"
+#include "Order.h"
 #include <vector>
 #include <string>
 
 class Controller{
 private:
-    vector<Stop> stopDB;
-    vector<Line> linesDB;
-    Graph graph;
+    vector<Order> orderDB;
+    vector<Truck> truckDB;
     string userName;
-    int maxWalingDistance=10000;
-    int walkingFactor;
+
 public:
     // Constructors
     /** @brief  Default constructor.*/
@@ -28,18 +26,12 @@ public:
 
     // Gets
 
-    /**
-    * @brief Gets the Graph of the Controller object.
-    * @return the graph attribute.
-    */
-    Graph& getGraph() {return graph;}
-
 
     /**
-    * @brief Gets the stopDB of the Controller object.
-    * @return the stopDB attribute.
+    * @brief Gets the truckDB of the Controller object.
+    * @return the truckDB attribute.
     */
-    vector<Stop>& getStops();
+    vector<Truck>& getTrucks();
 
     /**
     * @brief Gets the userName of the Controller object.
@@ -48,113 +40,67 @@ public:
     string getUsername();
 
     /**
-    * @brief Gets the linesDB of the Controller object.
-    * @return the linesDB attribute.
+    * @brief Gets the orderDB of the Controller object.
+    * @return the orderDB attribute.
     */
-    vector<Line> getLines();
-
-    /**
-    * @brief Gets the index of a Stop in the vector of the Controller object.
-    * @return the index of the Stop
-    */
-    int getIndexStop(string code);
-
-    /**
-    * @brief Gets the stopDB of the Controller object.
-    * @return the stopDB attribute.
-    */
-    vector<Stop>& getStopDB();
-
-    /**
-    * @brief Gets the directions from the origin to the destination.
-    */
-    string getDirections(string origin, string destination, int type = 0);
-
-    /**
-    * @brief Gets the Stops that are near from a location.
-    */
-    vector<int> getStopsNearCoords(double longitude, double latitude, double distance);
+    vector<Order> getOrders();
 
     //Reads
     /**
-    * @brief Reads stops
+    * @brief Reads orders
      * */
-    void readStops();
+    void readOrders();
 
     /**
-    * @brief Reads lines
+    * @brief Reads trucks
     * */
-    void readLines();
+    void readTrucks();
 
     /**
     * @brief Reads userData
     * */
     bool readUserData();
 
-    /**
-    * @brief Reads files from each line
-    * */
-    void extractStopsFromLines();
 
 
 
     // Finds
-    /** @brief  Returns an Stop based on the \p code.*/
-    Stop& findStop(string code);
-
-    /** @brief  Returns an Line based on the \p code.*/
-    Line& findLine(string code);
+//    /** @brief  Returns an Stop based on the \p code.*/
+//    Stop& findStop(string code);
+//
+//    /** @brief  Returns an Line based on the \p code.*/
+//    Line& findLine(string code);
 
 
     // Exists
-    /** @brief  Checks for the existence of an Stop based on \p code.*/
-    bool existsStop(string code);
+//    /** @brief  Checks for the existence of an Stop based on \p code.*/
+//    bool existsStop(string code);
 
 
     // Adds
     /** @brief  Adds a new Stop created with \p name, code, zone, latitude and longitude.*/
-    void addStop(string code, string name, string zone, float latitude, float longitude);
+    void addTruck(int volMax, int weightMax, int cost);
 
-    /** @brief  Adds the edges that represent every change of line.*/
-    void addEdgesInWalkingDistance();
+    void addOrder(int vol, int weight, int reward, int duration);
+
+
 
     // Removes
     /** @brief  Removes an Stop based on \p ID.*/
-    bool removeStop(string code);
+//    bool removeStop(string code);
 
 
-    // Specified Gets
-    /** @brief  Returns the closest stop from a location.*/
-    Stop getClosestStop(double lat1, double lon1);
+
 
 
     //Write
     /** @brief  Writes the .txt files upon Save&Quit*/
     void writeFiles();
 
-    // Creates
-    /** @brief  Creates the representation of the lines in the graph*/
-    void createGraphLines();
-
-    /** @brief  Funtion that gives de distance*/
-    static double haversine(double lat1, double lon1,
-                            double lat2, double lon2);
-
-
     //Sets
     /** @brief  Set userName attribute.*/
     void setUsername(string username);
 
-    /** @brief  Set walkingFac attribute.*/
-    void setWalkingFac(int walkF);
-
-    /** @brief  Set maxWalkDistattribute.*/
-    void setMaxWalkDist(int maxWD);
-
-
-    //Translates
-    /** @brief  Translates coords.*/
-    void translateCoord(string &str);
 };
 
 #endif //PROJ1_CONTROLLER_H
