@@ -1,6 +1,8 @@
 #include <iostream>
+#include "src/Interface/System.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    System system = System();
     return 0;
 }
+
