@@ -47,7 +47,7 @@ public:
 
     //Reads
     /**
-    * @brief Reads orders
+    * @brief Reads orders1
      * */
     void readOrders();
 
