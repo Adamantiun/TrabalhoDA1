@@ -3,7 +3,7 @@
 //
 
 #include "DirectionsMenu.h"
-
+/*
 DirectionsMenu::DirectionsMenu(Controller& controller): Menu(controller) {
     mainOptions = {"Insert station ID",
                    "Search for station by line",
@@ -126,4 +126,4 @@ bool DirectionsMenu::checkLineId(string id) {
     return false;
 }
 
-
+*/

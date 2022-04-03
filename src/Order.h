@@ -53,5 +53,7 @@ public:
     /** @brief  Set code attribute.*/
     void setDuration(const int &duration);
 
+    bool operator<(const Order& o);
+
 };
 #endif //TRABALHODA1_ORDER_H

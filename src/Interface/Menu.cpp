@@ -5,7 +5,7 @@
 #include <algorithm>
 #include <iostream>
 using namespace std;
-
+/*
 int Menu::printOptionsMenu(vector<string> options, string header, string footer) {
     string option = "";
     vector<string> validOpts;
@@ -126,3 +126,4 @@ bool Menu::is_number(const string& s)
     while (it != s.end() && isdigit(*it)) ++it;
     return !s.empty() && it == s.end();
 }
+*/

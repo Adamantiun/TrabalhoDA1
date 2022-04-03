@@ -89,12 +89,6 @@
 		<Unit filename="C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Controller.h">
 			<Option target="TrabalhoDA1"/>
 		</Unit>
-		<Unit filename="C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Graph.cpp">
-			<Option target="TrabalhoDA1"/>
-		</Unit>
-		<Unit filename="C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Graph.h">
-			<Option target="TrabalhoDA1"/>
-		</Unit>
 		<Unit filename="C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Interface/DirectionsMenu.cpp">
 			<Option target="TrabalhoDA1"/>
 		</Unit>
@@ -119,31 +113,16 @@
 		<Unit filename="C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Interface/System.h">
 			<Option target="TrabalhoDA1"/>
 		</Unit>
-		<Unit filename="C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Line.cpp">
-			<Option target="TrabalhoDA1"/>
-		</Unit>
-		<Unit filename="C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Line.h">
-			<Option target="TrabalhoDA1"/>
-		</Unit>
 		<Unit filename="C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Order.cpp">
 			<Option target="TrabalhoDA1"/>
 		</Unit>
 		<Unit filename="C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Order.h">
 			<Option target="TrabalhoDA1"/>
 		</Unit>
-		<Unit filename="C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/StopEdge.cpp">
-			<Option target="TrabalhoDA1"/>
-		</Unit>
-		<Unit filename="C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/StopEdge.h">
-			<Option target="TrabalhoDA1"/>
-		</Unit>
 		<Unit filename="C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Truck.cpp">
 			<Option target="TrabalhoDA1"/>
 		</Unit>
 		<Unit filename="C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Truck.h">
-			<Option target="TrabalhoDA1"/>
-		</Unit>
-		<Unit filename="C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/minHeap.h">
 			<Option target="TrabalhoDA1"/>
 		</Unit>
 		<Unit filename="C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/CMakeLists.txt">

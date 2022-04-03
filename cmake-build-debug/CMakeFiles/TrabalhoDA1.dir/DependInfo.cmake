@@ -10,14 +10,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/main.cpp" "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/cmake-build-debug/CMakeFiles/TrabalhoDA1.dir/main.cpp.obj"
   "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Controller.cpp" "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/cmake-build-debug/CMakeFiles/TrabalhoDA1.dir/src/Controller.cpp.obj"
-  "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Graph.cpp" "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/cmake-build-debug/CMakeFiles/TrabalhoDA1.dir/src/Graph.cpp.obj"
   "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Interface/DirectionsMenu.cpp" "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/cmake-build-debug/CMakeFiles/TrabalhoDA1.dir/src/Interface/DirectionsMenu.cpp.obj"
   "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Interface/Menu.cpp" "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/cmake-build-debug/CMakeFiles/TrabalhoDA1.dir/src/Interface/Menu.cpp.obj"
   "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Interface/OptionsMenu.cpp" "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/cmake-build-debug/CMakeFiles/TrabalhoDA1.dir/src/Interface/OptionsMenu.cpp.obj"
   "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Interface/System.cpp" "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/cmake-build-debug/CMakeFiles/TrabalhoDA1.dir/src/Interface/System.cpp.obj"
-  "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Line.cpp" "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/cmake-build-debug/CMakeFiles/TrabalhoDA1.dir/src/Line.cpp.obj"
   "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Order.cpp" "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/cmake-build-debug/CMakeFiles/TrabalhoDA1.dir/src/Order.cpp.obj"
-  "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/StopEdge.cpp" "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/cmake-build-debug/CMakeFiles/TrabalhoDA1.dir/src/StopEdge.cpp.obj"
   "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Truck.cpp" "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/cmake-build-debug/CMakeFiles/TrabalhoDA1.dir/src/Truck.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

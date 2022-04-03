@@ -52,3 +52,7 @@ void Order::setReward(const int &reward) {
 void Order::setVol(const int &vol) {
     this->vol=vol;
 }
+bool Order::operator<(const Order &o) {
+    if(o.duration< this->duration) return false;
+    return true;
+}

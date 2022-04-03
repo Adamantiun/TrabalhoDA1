@@ -13,7 +13,6 @@ CMakeFiles/TrabalhoDA1.dir/src/Controller.cpp.obj
  C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Controller.h
  C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Order.h
  C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Truck.h
-CMakeFiles/TrabalhoDA1.dir/src/Graph.cpp.obj
 CMakeFiles/TrabalhoDA1.dir/src/Interface/DirectionsMenu.cpp.obj
  C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Controller.h
  C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Interface/DirectionsMenu.cpp
@@ -46,11 +45,9 @@ CMakeFiles/TrabalhoDA1.dir/src/Interface/System.cpp.obj
  C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Interface/System.h
  C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Order.h
  C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Truck.h
-CMakeFiles/TrabalhoDA1.dir/src/Line.cpp.obj
 CMakeFiles/TrabalhoDA1.dir/src/Order.cpp.obj
  C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Order.cpp
  C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Order.h
-CMakeFiles/TrabalhoDA1.dir/src/StopEdge.cpp.obj
 CMakeFiles/TrabalhoDA1.dir/src/Truck.cpp.obj
  C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Truck.cpp
  C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Truck.h

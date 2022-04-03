@@ -8,63 +8,63 @@
 #include <string>
 #include <fstream>
 #include <cmath>
+#include <algorithm>
 
 
 Controller::Controller() {
     readTrucks();
     readOrders();
+
+
 }
 
 void Controller::readTrucks() {
-/*    ifstream stopsFile;
-    stopsFile.open("../src/dataset/stops.csv");
-    if (stopsFile.fail()) {
+    ifstream trucksFile;
+    trucksFile.open("../src/Data/trucks");
+    if (trucksFile.fail()) {
         cout << "This file doesn't exist!\n";
-    } else {
+    }
+    else {
         string line;
-        stopsFile >> line;
-        stopsFile.ignore();
-        int index=0;
-        while (!stopsFile.eof() && stopsFile.peek()!='\n') {
-            Stop stop;
-            stopsFile >> stop;
-            stop.setIndex(index);
-            this->stopDB.push_back(stop);
-            index++;
+        getline(trucksFile,line);
+        while (!trucksFile.eof() && trucksFile.peek()!='\n') {
+            Truck truck = Truck();
+            getline(trucksFile,line, ' ');
+            truck.setVolMax(stoi(line));
+            getline(trucksFile,line, ' ');
+            truck.setWeightMax(stoi(line));
+            getline(trucksFile,line);
+            truck.setCost(stoi(line));
+            truckDB.push_back(truck);
         }
-        stopDB.pop_back();
+        trucksFile.close();
     }
-    stopsFile.close();
-    graph = Graph(stopDB.size(), true);
-    for (int i=0;i<stopDB.size();i++){
-        graph.addStop(stopDB.at(i));
-    }
-
-*/
 }
 
 void Controller::readOrders() {
-    /*
     ifstream ordersFile;
-    ordersFile.open("../src/Data/orders1.txt");
+    ordersFile.open("../src/Data/orders1");
     if (ordersFile.fail()) {
         cout << "This file doesn't exist!\n";
     }
     else {
-        string l;
-        ordersFile >> l;
-        linesFile.ignore();
-        while (!linesFile.eof() && linesFile.peek() != '\n') {
-            Line line;
-            linesFile >> line;
-            if(line.getCode().find('M') == string::npos)
-                this->linesDB.push_back(line);
+        string line;
+        getline(ordersFile,line);
+        while (!ordersFile.eof() && ordersFile.peek()!='\n') {
+            Order order = Order();
+            getline(ordersFile,line, ' ');
+            order.setVol(stoi(line));
+            getline(ordersFile,line, ' ');
+            order.setWeight(stoi(line));
+            getline(ordersFile,line, ' ');
+            order.setReward(stoi(line));
+            getline(ordersFile,line);
+            order.setDuration(stoi(line));
+            orderDB.push_back(order);
         }
-        linesDB.pop_back();
-        linesFile.close();
-        extractStopsFromLines();
+        ordersFile.close();
     }
-     */
+
 }
 
 
@@ -82,9 +82,11 @@ bool Controller::readUserData() {
     walkingFactor = atoi(buf);
     userFile.getline(buf, 100, '\n');
     maxWalingDistance = atoi(buf);
+
     userFile.close();
-    return true;
      */
+    return true;
+
 }
 
 Controller::~Controller(){
@@ -168,6 +170,19 @@ void Controller::setUsername(string username) {
     this->userName = username;
 }
 
+
+vector<Order> Controller::cenarioIII(){
+    vector<Order> res;
+    sort(orderDB.begin(),orderDB.end());
+    int total=0;
+    int time=28800;
+    for(int i=0; i<orderDB.size(); i++){
+        if(total + orderDB[i].getDuration() >time){break;}
+        total+=orderDB[i].getDuration();
+        res.push_back(orderDB[i]);
+    }
+    return res;
+}
 
 
 

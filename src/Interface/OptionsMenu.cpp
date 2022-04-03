@@ -4,7 +4,7 @@
 
 #include "OptionsMenu.h"
 #include "Menu.h"
-
+/*
 OptionsMenu::OptionsMenu(Controller& controller) : Menu(controller) {
     mainOptions = {
             "Set walking factor",
@@ -40,3 +40,4 @@ void OptionsMenu::setUsername() {
         return;
     controller->setUsername(input);
 }
+*/

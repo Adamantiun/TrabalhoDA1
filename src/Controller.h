@@ -101,6 +101,9 @@ public:
     /** @brief  Set userName attribute.*/
     void setUsername(string username);
 
-};
+    vector<Order> cenarioIII();
+
+
+    };
 
 #endif //PROJ1_CONTROLLER_H

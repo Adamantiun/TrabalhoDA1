@@ -104,48 +104,9 @@ CMakeFiles/TrabalhoDA1.dir/src/Controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TrabalhoDA1.dir/src/Controller.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\src\Controller.cpp -o CMakeFiles\TrabalhoDA1.dir\src\Controller.cpp.s
 
-CMakeFiles/TrabalhoDA1.dir/src/Graph.cpp.obj: CMakeFiles/TrabalhoDA1.dir/flags.make
-CMakeFiles/TrabalhoDA1.dir/src/Graph.cpp.obj: ../src/Graph.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/TrabalhoDA1.dir/src/Graph.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TrabalhoDA1.dir\src\Graph.cpp.obj -c C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\src\Graph.cpp
-
-CMakeFiles/TrabalhoDA1.dir/src/Graph.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TrabalhoDA1.dir/src/Graph.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\src\Graph.cpp > CMakeFiles\TrabalhoDA1.dir\src\Graph.cpp.i
-
-CMakeFiles/TrabalhoDA1.dir/src/Graph.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TrabalhoDA1.dir/src/Graph.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\src\Graph.cpp -o CMakeFiles\TrabalhoDA1.dir\src\Graph.cpp.s
-
-CMakeFiles/TrabalhoDA1.dir/src/StopEdge.cpp.obj: CMakeFiles/TrabalhoDA1.dir/flags.make
-CMakeFiles/TrabalhoDA1.dir/src/StopEdge.cpp.obj: ../src/StopEdge.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/TrabalhoDA1.dir/src/StopEdge.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TrabalhoDA1.dir\src\StopEdge.cpp.obj -c C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\src\StopEdge.cpp
-
-CMakeFiles/TrabalhoDA1.dir/src/StopEdge.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TrabalhoDA1.dir/src/StopEdge.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\src\StopEdge.cpp > CMakeFiles\TrabalhoDA1.dir\src\StopEdge.cpp.i
-
-CMakeFiles/TrabalhoDA1.dir/src/StopEdge.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TrabalhoDA1.dir/src/StopEdge.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\src\StopEdge.cpp -o CMakeFiles\TrabalhoDA1.dir\src\StopEdge.cpp.s
-
-CMakeFiles/TrabalhoDA1.dir/src/Line.cpp.obj: CMakeFiles/TrabalhoDA1.dir/flags.make
-CMakeFiles/TrabalhoDA1.dir/src/Line.cpp.obj: ../src/Line.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/TrabalhoDA1.dir/src/Line.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TrabalhoDA1.dir\src\Line.cpp.obj -c C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\src\Line.cpp
-
-CMakeFiles/TrabalhoDA1.dir/src/Line.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TrabalhoDA1.dir/src/Line.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\src\Line.cpp > CMakeFiles\TrabalhoDA1.dir\src\Line.cpp.i
-
-CMakeFiles/TrabalhoDA1.dir/src/Line.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TrabalhoDA1.dir/src/Line.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\src\Line.cpp -o CMakeFiles\TrabalhoDA1.dir\src\Line.cpp.s
-
 CMakeFiles/TrabalhoDA1.dir/src/Interface/Menu.cpp.obj: CMakeFiles/TrabalhoDA1.dir/flags.make
 CMakeFiles/TrabalhoDA1.dir/src/Interface/Menu.cpp.obj: ../src/Interface/Menu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/TrabalhoDA1.dir/src/Interface/Menu.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/TrabalhoDA1.dir/src/Interface/Menu.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TrabalhoDA1.dir\src\Interface\Menu.cpp.obj -c C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\src\Interface\Menu.cpp
 
 CMakeFiles/TrabalhoDA1.dir/src/Interface/Menu.cpp.i: cmake_force
@@ -158,7 +119,7 @@ CMakeFiles/TrabalhoDA1.dir/src/Interface/Menu.cpp.s: cmake_force
 
 CMakeFiles/TrabalhoDA1.dir/src/Interface/DirectionsMenu.cpp.obj: CMakeFiles/TrabalhoDA1.dir/flags.make
 CMakeFiles/TrabalhoDA1.dir/src/Interface/DirectionsMenu.cpp.obj: ../src/Interface/DirectionsMenu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/TrabalhoDA1.dir/src/Interface/DirectionsMenu.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/TrabalhoDA1.dir/src/Interface/DirectionsMenu.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TrabalhoDA1.dir\src\Interface\DirectionsMenu.cpp.obj -c C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\src\Interface\DirectionsMenu.cpp
 
 CMakeFiles/TrabalhoDA1.dir/src/Interface/DirectionsMenu.cpp.i: cmake_force
@@ -171,7 +132,7 @@ CMakeFiles/TrabalhoDA1.dir/src/Interface/DirectionsMenu.cpp.s: cmake_force
 
 CMakeFiles/TrabalhoDA1.dir/src/Interface/OptionsMenu.cpp.obj: CMakeFiles/TrabalhoDA1.dir/flags.make
 CMakeFiles/TrabalhoDA1.dir/src/Interface/OptionsMenu.cpp.obj: ../src/Interface/OptionsMenu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/TrabalhoDA1.dir/src/Interface/OptionsMenu.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/TrabalhoDA1.dir/src/Interface/OptionsMenu.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TrabalhoDA1.dir\src\Interface\OptionsMenu.cpp.obj -c C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\src\Interface\OptionsMenu.cpp
 
 CMakeFiles/TrabalhoDA1.dir/src/Interface/OptionsMenu.cpp.i: cmake_force
@@ -184,7 +145,7 @@ CMakeFiles/TrabalhoDA1.dir/src/Interface/OptionsMenu.cpp.s: cmake_force
 
 CMakeFiles/TrabalhoDA1.dir/src/Order.cpp.obj: CMakeFiles/TrabalhoDA1.dir/flags.make
 CMakeFiles/TrabalhoDA1.dir/src/Order.cpp.obj: ../src/Order.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/TrabalhoDA1.dir/src/Order.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/TrabalhoDA1.dir/src/Order.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TrabalhoDA1.dir\src\Order.cpp.obj -c C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\src\Order.cpp
 
 CMakeFiles/TrabalhoDA1.dir/src/Order.cpp.i: cmake_force
@@ -197,7 +158,7 @@ CMakeFiles/TrabalhoDA1.dir/src/Order.cpp.s: cmake_force
 
 CMakeFiles/TrabalhoDA1.dir/src/Truck.cpp.obj: CMakeFiles/TrabalhoDA1.dir/flags.make
 CMakeFiles/TrabalhoDA1.dir/src/Truck.cpp.obj: ../src/Truck.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/TrabalhoDA1.dir/src/Truck.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/TrabalhoDA1.dir/src/Truck.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TrabalhoDA1.dir\src\Truck.cpp.obj -c C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\src\Truck.cpp
 
 CMakeFiles/TrabalhoDA1.dir/src/Truck.cpp.i: cmake_force
@@ -213,9 +174,6 @@ TrabalhoDA1_OBJECTS = \
 "CMakeFiles/TrabalhoDA1.dir/main.cpp.obj" \
 "CMakeFiles/TrabalhoDA1.dir/src/Interface/System.cpp.obj" \
 "CMakeFiles/TrabalhoDA1.dir/src/Controller.cpp.obj" \
-"CMakeFiles/TrabalhoDA1.dir/src/Graph.cpp.obj" \
-"CMakeFiles/TrabalhoDA1.dir/src/StopEdge.cpp.obj" \
-"CMakeFiles/TrabalhoDA1.dir/src/Line.cpp.obj" \
 "CMakeFiles/TrabalhoDA1.dir/src/Interface/Menu.cpp.obj" \
 "CMakeFiles/TrabalhoDA1.dir/src/Interface/DirectionsMenu.cpp.obj" \
 "CMakeFiles/TrabalhoDA1.dir/src/Interface/OptionsMenu.cpp.obj" \
@@ -228,9 +186,6 @@ TrabalhoDA1_EXTERNAL_OBJECTS =
 TrabalhoDA1.exe: CMakeFiles/TrabalhoDA1.dir/main.cpp.obj
 TrabalhoDA1.exe: CMakeFiles/TrabalhoDA1.dir/src/Interface/System.cpp.obj
 TrabalhoDA1.exe: CMakeFiles/TrabalhoDA1.dir/src/Controller.cpp.obj
-TrabalhoDA1.exe: CMakeFiles/TrabalhoDA1.dir/src/Graph.cpp.obj
-TrabalhoDA1.exe: CMakeFiles/TrabalhoDA1.dir/src/StopEdge.cpp.obj
-TrabalhoDA1.exe: CMakeFiles/TrabalhoDA1.dir/src/Line.cpp.obj
 TrabalhoDA1.exe: CMakeFiles/TrabalhoDA1.dir/src/Interface/Menu.cpp.obj
 TrabalhoDA1.exe: CMakeFiles/TrabalhoDA1.dir/src/Interface/DirectionsMenu.cpp.obj
 TrabalhoDA1.exe: CMakeFiles/TrabalhoDA1.dir/src/Interface/OptionsMenu.cpp.obj
@@ -240,7 +195,7 @@ TrabalhoDA1.exe: CMakeFiles/TrabalhoDA1.dir/build.make
 TrabalhoDA1.exe: CMakeFiles/TrabalhoDA1.dir/linklibs.rsp
 TrabalhoDA1.exe: CMakeFiles/TrabalhoDA1.dir/objects1.rsp
 TrabalhoDA1.exe: CMakeFiles/TrabalhoDA1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable TrabalhoDA1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\35196\OneDrive\Documentos\GitHub\TrabalhoDA1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable TrabalhoDA1.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\TrabalhoDA1.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -176,30 +176,6 @@ src/Controller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\TrabalhoDA1.dir\build.make CMakeFiles/TrabalhoDA1.dir/src/Controller.cpp.s
 .PHONY : src/Controller.cpp.s
 
-src/Graph.obj: src/Graph.cpp.obj
-.PHONY : src/Graph.obj
-
-# target to build an object file
-src/Graph.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TrabalhoDA1.dir\build.make CMakeFiles/TrabalhoDA1.dir/src/Graph.cpp.obj
-.PHONY : src/Graph.cpp.obj
-
-src/Graph.i: src/Graph.cpp.i
-.PHONY : src/Graph.i
-
-# target to preprocess a source file
-src/Graph.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TrabalhoDA1.dir\build.make CMakeFiles/TrabalhoDA1.dir/src/Graph.cpp.i
-.PHONY : src/Graph.cpp.i
-
-src/Graph.s: src/Graph.cpp.s
-.PHONY : src/Graph.s
-
-# target to generate assembly for a file
-src/Graph.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TrabalhoDA1.dir\build.make CMakeFiles/TrabalhoDA1.dir/src/Graph.cpp.s
-.PHONY : src/Graph.cpp.s
-
 src/Interface/DirectionsMenu.obj: src/Interface/DirectionsMenu.cpp.obj
 .PHONY : src/Interface/DirectionsMenu.obj
 
@@ -296,30 +272,6 @@ src/Interface/System.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\TrabalhoDA1.dir\build.make CMakeFiles/TrabalhoDA1.dir/src/Interface/System.cpp.s
 .PHONY : src/Interface/System.cpp.s
 
-src/Line.obj: src/Line.cpp.obj
-.PHONY : src/Line.obj
-
-# target to build an object file
-src/Line.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TrabalhoDA1.dir\build.make CMakeFiles/TrabalhoDA1.dir/src/Line.cpp.obj
-.PHONY : src/Line.cpp.obj
-
-src/Line.i: src/Line.cpp.i
-.PHONY : src/Line.i
-
-# target to preprocess a source file
-src/Line.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TrabalhoDA1.dir\build.make CMakeFiles/TrabalhoDA1.dir/src/Line.cpp.i
-.PHONY : src/Line.cpp.i
-
-src/Line.s: src/Line.cpp.s
-.PHONY : src/Line.s
-
-# target to generate assembly for a file
-src/Line.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TrabalhoDA1.dir\build.make CMakeFiles/TrabalhoDA1.dir/src/Line.cpp.s
-.PHONY : src/Line.cpp.s
-
 src/Order.obj: src/Order.cpp.obj
 .PHONY : src/Order.obj
 
@@ -343,30 +295,6 @@ src/Order.s: src/Order.cpp.s
 src/Order.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\TrabalhoDA1.dir\build.make CMakeFiles/TrabalhoDA1.dir/src/Order.cpp.s
 .PHONY : src/Order.cpp.s
-
-src/StopEdge.obj: src/StopEdge.cpp.obj
-.PHONY : src/StopEdge.obj
-
-# target to build an object file
-src/StopEdge.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TrabalhoDA1.dir\build.make CMakeFiles/TrabalhoDA1.dir/src/StopEdge.cpp.obj
-.PHONY : src/StopEdge.cpp.obj
-
-src/StopEdge.i: src/StopEdge.cpp.i
-.PHONY : src/StopEdge.i
-
-# target to preprocess a source file
-src/StopEdge.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TrabalhoDA1.dir\build.make CMakeFiles/TrabalhoDA1.dir/src/StopEdge.cpp.i
-.PHONY : src/StopEdge.cpp.i
-
-src/StopEdge.s: src/StopEdge.cpp.s
-.PHONY : src/StopEdge.s
-
-# target to generate assembly for a file
-src/StopEdge.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TrabalhoDA1.dir\build.make CMakeFiles/TrabalhoDA1.dir/src/StopEdge.cpp.s
-.PHONY : src/StopEdge.cpp.s
 
 src/Truck.obj: src/Truck.cpp.obj
 .PHONY : src/Truck.obj
@@ -407,9 +335,6 @@ help:
 	@echo ... src/Controller.obj
 	@echo ... src/Controller.i
 	@echo ... src/Controller.s
-	@echo ... src/Graph.obj
-	@echo ... src/Graph.i
-	@echo ... src/Graph.s
 	@echo ... src/Interface/DirectionsMenu.obj
 	@echo ... src/Interface/DirectionsMenu.i
 	@echo ... src/Interface/DirectionsMenu.s
@@ -422,15 +347,9 @@ help:
 	@echo ... src/Interface/System.obj
 	@echo ... src/Interface/System.i
 	@echo ... src/Interface/System.s
-	@echo ... src/Line.obj
-	@echo ... src/Line.i
-	@echo ... src/Line.s
 	@echo ... src/Order.obj
 	@echo ... src/Order.i
 	@echo ... src/Order.s
-	@echo ... src/StopEdge.obj
-	@echo ... src/StopEdge.i
-	@echo ... src/StopEdge.s
 	@echo ... src/Truck.obj
 	@echo ... src/Truck.i
 	@echo ... src/Truck.s
