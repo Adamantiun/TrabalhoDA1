@@ -25,7 +25,6 @@ employees, trucks and the main focus is to provide optimization in several cenar
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * c++
  
 
@@ -52,9 +51,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Adam Gershenson - 2020...  - email@example.com
-Ana Sofia Guedes - 2020... - email@example.com
-José Artur Assuncao - 202000163 - joseartura1.2@gmail.com
+* Adam Gershenson - 2020...  - email@example.com
+* Ana Sofia Guedes - 2020... - email@example.com
+* José Artur Assuncao - 202000163 - joseartura1.2@gmail.com
 
 Project Link: [https://github.com/Adamantiun/TrabalhoDA1](https://github.com/Adamantiun/TrabalhoDA1)
 
