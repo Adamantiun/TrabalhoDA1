@@ -49,7 +49,7 @@ public:
     /**
     * @brief Reads orders1
      * */
-    void readOrders();
+    bool readOrders(int orderNo);
 
     /**
     * @brief Reads trucks
@@ -101,9 +101,7 @@ public:
     /** @brief  Set userName attribute.*/
     void setUsername(string username);
 
-    vector<Order> cenarioIII();
-
-
-    };
+    vector <Order> scenery3();
+};
 
 #endif //PROJ1_CONTROLLER_H

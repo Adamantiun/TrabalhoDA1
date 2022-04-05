@@ -67,41 +67,23 @@ build CMakeFiles/TrabalhoDA1.dir/src/Controller.cpp.obj: CXX_COMPILER__TrabalhoD
   OBJECT_DIR = CMakeFiles\TrabalhoDA1.dir
   OBJECT_FILE_DIR = CMakeFiles\TrabalhoDA1.dir\src
 
-build CMakeFiles/TrabalhoDA1.dir/src/Graph.cpp.obj: CXX_COMPILER__TrabalhoDA1_Debug D$:/ADAM/Desktop/DA/TrabalhoDA1/TrabalhoDA1/src/Graph.cpp || cmake_object_order_depends_target_TrabalhoDA1
-  DEP_FILE = CMakeFiles\TrabalhoDA1.dir\src\Graph.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\TrabalhoDA1.dir
-  OBJECT_FILE_DIR = CMakeFiles\TrabalhoDA1.dir\src
-
-build CMakeFiles/TrabalhoDA1.dir/src/StopEdge.cpp.obj: CXX_COMPILER__TrabalhoDA1_Debug D$:/ADAM/Desktop/DA/TrabalhoDA1/TrabalhoDA1/src/StopEdge.cpp || cmake_object_order_depends_target_TrabalhoDA1
-  DEP_FILE = CMakeFiles\TrabalhoDA1.dir\src\StopEdge.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\TrabalhoDA1.dir
-  OBJECT_FILE_DIR = CMakeFiles\TrabalhoDA1.dir\src
-
-build CMakeFiles/TrabalhoDA1.dir/src/Line.cpp.obj: CXX_COMPILER__TrabalhoDA1_Debug D$:/ADAM/Desktop/DA/TrabalhoDA1/TrabalhoDA1/src/Line.cpp || cmake_object_order_depends_target_TrabalhoDA1
-  DEP_FILE = CMakeFiles\TrabalhoDA1.dir\src\Line.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\TrabalhoDA1.dir
-  OBJECT_FILE_DIR = CMakeFiles\TrabalhoDA1.dir\src
-
 build CMakeFiles/TrabalhoDA1.dir/src/Interface/Menu.cpp.obj: CXX_COMPILER__TrabalhoDA1_Debug D$:/ADAM/Desktop/DA/TrabalhoDA1/TrabalhoDA1/src/Interface/Menu.cpp || cmake_object_order_depends_target_TrabalhoDA1
   DEP_FILE = CMakeFiles\TrabalhoDA1.dir\src\Interface\Menu.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\TrabalhoDA1.dir
   OBJECT_FILE_DIR = CMakeFiles\TrabalhoDA1.dir\src\Interface
 
-build CMakeFiles/TrabalhoDA1.dir/src/Interface/DirectionsMenu.cpp.obj: CXX_COMPILER__TrabalhoDA1_Debug D$:/ADAM/Desktop/DA/TrabalhoDA1/TrabalhoDA1/src/Interface/DirectionsMenu.cpp || cmake_object_order_depends_target_TrabalhoDA1
-  DEP_FILE = CMakeFiles\TrabalhoDA1.dir\src\Interface\DirectionsMenu.cpp.obj.d
+build CMakeFiles/TrabalhoDA1.dir/src/Order.cpp.obj: CXX_COMPILER__TrabalhoDA1_Debug D$:/ADAM/Desktop/DA/TrabalhoDA1/TrabalhoDA1/src/Order.cpp || cmake_object_order_depends_target_TrabalhoDA1
+  DEP_FILE = CMakeFiles\TrabalhoDA1.dir\src\Order.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\TrabalhoDA1.dir
-  OBJECT_FILE_DIR = CMakeFiles\TrabalhoDA1.dir\src\Interface
+  OBJECT_FILE_DIR = CMakeFiles\TrabalhoDA1.dir\src
 
-build CMakeFiles/TrabalhoDA1.dir/src/Interface/OptionsMenu.cpp.obj: CXX_COMPILER__TrabalhoDA1_Debug D$:/ADAM/Desktop/DA/TrabalhoDA1/TrabalhoDA1/src/Interface/OptionsMenu.cpp || cmake_object_order_depends_target_TrabalhoDA1
-  DEP_FILE = CMakeFiles\TrabalhoDA1.dir\src\Interface\OptionsMenu.cpp.obj.d
+build CMakeFiles/TrabalhoDA1.dir/src/Truck.cpp.obj: CXX_COMPILER__TrabalhoDA1_Debug D$:/ADAM/Desktop/DA/TrabalhoDA1/TrabalhoDA1/src/Truck.cpp || cmake_object_order_depends_target_TrabalhoDA1
+  DEP_FILE = CMakeFiles\TrabalhoDA1.dir\src\Truck.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\TrabalhoDA1.dir
-  OBJECT_FILE_DIR = CMakeFiles\TrabalhoDA1.dir\src\Interface
+  OBJECT_FILE_DIR = CMakeFiles\TrabalhoDA1.dir\src
 
 
 # =============================================================================
@@ -111,7 +93,7 @@ build CMakeFiles/TrabalhoDA1.dir/src/Interface/OptionsMenu.cpp.obj: CXX_COMPILER
 #############################################
 # Link the executable TrabalhoDA1.exe
 
-build TrabalhoDA1.exe: CXX_EXECUTABLE_LINKER__TrabalhoDA1_Debug CMakeFiles/TrabalhoDA1.dir/main.cpp.obj CMakeFiles/TrabalhoDA1.dir/src/Interface/System.cpp.obj CMakeFiles/TrabalhoDA1.dir/src/Controller.cpp.obj CMakeFiles/TrabalhoDA1.dir/src/Graph.cpp.obj CMakeFiles/TrabalhoDA1.dir/src/StopEdge.cpp.obj CMakeFiles/TrabalhoDA1.dir/src/Line.cpp.obj CMakeFiles/TrabalhoDA1.dir/src/Interface/Menu.cpp.obj CMakeFiles/TrabalhoDA1.dir/src/Interface/DirectionsMenu.cpp.obj CMakeFiles/TrabalhoDA1.dir/src/Interface/OptionsMenu.cpp.obj
+build TrabalhoDA1.exe: CXX_EXECUTABLE_LINKER__TrabalhoDA1_Debug CMakeFiles/TrabalhoDA1.dir/main.cpp.obj CMakeFiles/TrabalhoDA1.dir/src/Interface/System.cpp.obj CMakeFiles/TrabalhoDA1.dir/src/Controller.cpp.obj CMakeFiles/TrabalhoDA1.dir/src/Interface/Menu.cpp.obj CMakeFiles/TrabalhoDA1.dir/src/Order.cpp.obj CMakeFiles/TrabalhoDA1.dir/src/Truck.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\TrabalhoDA1.dir

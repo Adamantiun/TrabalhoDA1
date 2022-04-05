@@ -5,7 +5,7 @@
 #include <algorithm>
 #include <iostream>
 using namespace std;
-/*
+
 int Menu::printOptionsMenu(vector<string> options, string header, string footer) {
     string option = "";
     vector<string> validOpts;
@@ -39,9 +39,9 @@ void Menu::printLowerFrame(){
 }
 
 void Menu::printUpperFrame() {
-    for (size_t i = 0; i < 47; i++)
+    for (size_t i = 0; i < 52; i++)
         cout << (char)205;
-    cout << (char)185 <<"Q:Save&Quit" << (char)204 << endl;
+    cout << (char)185 <<"Q:Quit" << (char)204 << endl;
 }
 
 string Menu::anyInputMenu(string message, string footer, bool ignoreSpaces){
@@ -53,7 +53,23 @@ string Menu::anyInputMenu(string message, string footer, bool ignoreSpaces){
     string ret = askCin(ignoreSpaces);
     System::clearScreen();
     return ret;
-};
+}
+
+string Menu::intInputMenu(string message, string footer, int lowerBound, int upperBound, bool ignoreSpaces){
+    string ret = "batata";
+    while(!checkIntInput(ret, lowerBound, upperBound)){
+        printUpperFrame();
+        cout << message << endl;
+        printLowerFrame();
+        if(footer!="")
+            cout << footer;
+        if(ret!="batata")
+            cout << "\nInput needs to be an integer!";
+        ret = askCin(ignoreSpaces);
+        System::clearScreen();
+    }
+    return ret;
+}
 
 void Menu::singleInputScreen(string m1, string requestedInput, string m2){
     string input = "";
@@ -126,4 +142,7 @@ bool Menu::is_number(const string& s)
     while (it != s.end() && isdigit(*it)) ++it;
     return !s.empty() && it == s.end();
 }
-*/
+
+void Menu::setMainOps(std::vector<string> options) {
+    mainOptions = options;
+}

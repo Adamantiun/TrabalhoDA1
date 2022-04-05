@@ -13,7 +13,6 @@
 
 Controller::Controller() {
     readTrucks();
-    readOrders();
 
 
 }
@@ -41,30 +40,28 @@ void Controller::readTrucks() {
     }
 }
 
-void Controller::readOrders() {
+bool Controller::readOrders(int orderNo) {
     ifstream ordersFile;
-    ordersFile.open("../src/Data/orders1");
+    ordersFile.open("../src/Data/orders" + to_string(orderNo));
     if (ordersFile.fail()) {
-        cout << "This file doesn't exist!\n";
+        return false;
     }
-    else {
-        string line;
+    string line;
+    getline(ordersFile,line);
+    while (!ordersFile.eof() && ordersFile.peek()!='\n') {
+        Order order = Order();
+        getline(ordersFile,line, ' ');
+        order.setVol(stoi(line));
+        getline(ordersFile,line, ' ');
+        order.setWeight(stoi(line));
+        getline(ordersFile,line, ' ');
+        order.setReward(stoi(line));
         getline(ordersFile,line);
-        while (!ordersFile.eof() && ordersFile.peek()!='\n') {
-            Order order = Order();
-            getline(ordersFile,line, ' ');
-            order.setVol(stoi(line));
-            getline(ordersFile,line, ' ');
-            order.setWeight(stoi(line));
-            getline(ordersFile,line, ' ');
-            order.setReward(stoi(line));
-            getline(ordersFile,line);
-            order.setDuration(stoi(line));
-            orderDB.push_back(order);
-        }
-        ordersFile.close();
+        order.setDuration(stoi(line));
+        orderDB.push_back(order);
     }
-
+    ordersFile.close();
+    return true;
 }
 
 
@@ -171,15 +168,17 @@ void Controller::setUsername(string username) {
 }
 
 
-vector<Order> Controller::cenarioIII(){
+vector<Order> Controller::scenery3(){
     vector<Order> res;
-    sort(orderDB.begin(),orderDB.end());
+    vector<Order> aux = orderDB;
+    sort(aux.begin(),aux.end(), [](const Order &a, const Order &b) {
+        return a.getDuration() < b.getDuration();});
     int total=0;
     int time=28800;
-    for(int i=0; i<orderDB.size(); i++){
-        if(total + orderDB[i].getDuration() >time){break;}
-        total+=orderDB[i].getDuration();
-        res.push_back(orderDB[i]);
+    for(int i=0; i<aux.size(); i++){
+        if(total + aux[i].getDuration() >time){break;}
+        total+=aux[i].getDuration();
+        res.push_back(aux[i]);
     }
     return res;
 }

@@ -17,7 +17,7 @@ public:
     System();
     Controller& getController() {return controller;}
     static void clearScreen();
-    //static string fixString(string str);
+    static string fixString(string str);
 };
 #endif //PROJ1_SYSTEM_H
 

@@ -1,0 +1,14 @@
+# ninja log v5
+7	5510	6708709032466794	CMakeFiles/TrabalhoDA1.dir/src/Interface/System.cpp.obj	2ed69b2077959333
+27	1024	6708674863702129	CMakeFiles/TrabalhoDA1.dir/src/Interface/DirectionsMenu.cpp.obj	e0cd0fd41a03460e
+640	3195	6708674864483391	CMakeFiles/TrabalhoDA1.dir/src/Truck.cpp.obj	a2cad7a186f16b66
+36	3190	6708674864014654	CMakeFiles/TrabalhoDA1.dir/src/Interface/OptionsMenu.cpp.obj	2166d447a05a9e9f
+35	1427	6708708991469215	CMakeFiles/TrabalhoDA1.dir/main.cpp.obj	ae6aafcc0461a12b
+39	1994	6708708997141481	CMakeFiles/TrabalhoDA1.dir/src/Interface/Menu.cpp.obj	dfb9c7b3243a26aa
+3166	3302	6708674886928036	CMakeFiles/TrabalhoDA1.dir/src/Order.cpp.obj	d140026f541a5474
+53	2192	6708708999328895	CMakeFiles/TrabalhoDA1.dir/src/Controller.cpp.obj	93bd4cc28722ee6a
+3306	3572	6708674889584362	TrabalhoDA1.exe	8c6c41af02f86
+5	4573	6708709484171792	CMakeFiles/TrabalhoDA1.dir/src/Interface/System.cpp.obj	2ed69b2077959333
+4574	7658	6708709515051028	TrabalhoDA1.exe	881f241a1590c597
+4	578	6708709631434285	CMakeFiles/TrabalhoDA1.dir/main.cpp.obj	ae6aafcc0461a12b
+578	3762	6708709663185101	TrabalhoDA1.exe	881f241a1590c597
