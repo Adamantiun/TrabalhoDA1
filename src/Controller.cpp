@@ -46,6 +46,7 @@ bool Controller::readOrders(int orderNo) {
     if (ordersFile.fail()) {
         return false;
     }
+    orderDB.clear();
     string line;
     getline(ordersFile,line);
     while (!ordersFile.eof() && ordersFile.peek()!='\n') {
