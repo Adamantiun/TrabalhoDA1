@@ -79,9 +79,9 @@ public:
 
     // Adds
     /** @brief  Adds a new Stop created with \p name, code, zone, latitude and longitude.*/
-    void addTruck(int volMax, int weightMax, int cost);
+    void addTruck(int id, int volMax, int weightMax, int cost);
 
-    void addOrder(int vol, int weight, int reward, int duration);
+    void addOrder(int id, int vol, int weight, int reward, int duration);
 
 
 

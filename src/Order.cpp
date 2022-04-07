@@ -5,6 +5,7 @@
 #include "Order.h"
 
 Order::Order(){
+    this->id=0;
     this->weight=0;
     this->duration=0;
     this->reward=0;
@@ -14,11 +15,16 @@ Order::Order(){
 Order::~Order(){
 }
 
-Order::Order(const int &vol, const int &weight, const int &reward, const int &duration){
+Order::Order(const int &id, const int &vol, const int &weight, const int &reward, const int &duration){
+    this->id=id;
     this->weight=vol;
     this->duration=weight;
     this->reward=reward;
     this->vol=duration;
+}
+
+const int &Order::getId() const {
+    return id;
 }
 
 const int &Order::getWeight() const {
@@ -35,6 +41,10 @@ const int &Order::getReward() const {
 
 const int &Order::getVol() const {
     return vol;
+}
+
+void Order::setId(const int &id) {
+    this->id=id;
 }
 
 void Order::setWeight(const int &weight) {

@@ -13,8 +13,6 @@
 
 Controller::Controller() {
     readTrucks();
-
-
 }
 
 void Controller::readTrucks() {
@@ -28,6 +26,8 @@ void Controller::readTrucks() {
         getline(trucksFile,line);
         while (!trucksFile.eof() && trucksFile.peek()!='\n') {
             Truck truck = Truck();
+            getline(trucksFile,line, ' ');
+            truck.setId(stoi(line));
             getline(trucksFile,line, ' ');
             truck.setVolMax(stoi(line));
             getline(trucksFile,line, ' ');
@@ -51,6 +51,8 @@ bool Controller::readOrders(int orderNo) {
     getline(ordersFile,line);
     while (!ordersFile.eof() && ordersFile.peek()!='\n') {
         Order order = Order();
+        getline(ordersFile,line, ' ');
+        order.setId(stoi(line));
         getline(ordersFile,line, ' ');
         order.setVol(stoi(line));
         getline(ordersFile,line, ' ');
@@ -123,13 +125,13 @@ Line& Controller::findLine(string code) {
 
 
 
-void Controller::addTruck(int volMax, int weightMax, int cost) {
-    Truck truck = Truck(volMax,weightMax,cost);
+void Controller::addTruck(int id,int volMax, int weightMax, int cost) {
+    Truck truck = Truck(id, volMax,weightMax,cost);
     truckDB.push_back(truck);
 }
 
-void Controller::addOrder(int vol, int weight, int reward, int duration) {
-    Order order = Order(vol,weight,reward,duration);
+void Controller::addOrder(int id, int vol, int weight, int reward, int duration) {
+    Order order = Order(id, vol,weight,reward,duration);
     orderDB.push_back(order);
 }
 

@@ -9,6 +9,7 @@ using namespace std;
 
 class Order {
 private:
+    int id;
     int vol;
     int weight;
     int reward;
@@ -20,13 +21,16 @@ public:
     Order();
 
     /** @brief Received the necessary attributes to create a Order object.*/
-    Order(const int &vol, const int &weight, const int &reward, const int &duration);
+    Order(const int &id, const int &vol, const int &weight, const int &reward, const int &duration);
 
     //Deconstructors
     /** @brief  Default destructor.*/
     ~Order();
 
     //Gets
+    /** @brief  Get id attribute.*/
+    const int &getId() const;
+
     /** @brief  Get volume attribute.*/
     const int &getVol() const;
 
@@ -41,6 +45,9 @@ public:
 
 
     //Sets
+    /** @brief  Set id attribute.*/
+    void setId (const int &id);
+
     /** @brief  Set volume attribute.*/
     void setVol(const int &vol);
 

@@ -176,30 +176,6 @@ src/Controller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\TrabalhoDA1.dir\build.make CMakeFiles/TrabalhoDA1.dir/src/Controller.cpp.s
 .PHONY : src/Controller.cpp.s
 
-src/Interface/DirectionsMenu.obj: src/Interface/DirectionsMenu.cpp.obj
-.PHONY : src/Interface/DirectionsMenu.obj
-
-# target to build an object file
-src/Interface/DirectionsMenu.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TrabalhoDA1.dir\build.make CMakeFiles/TrabalhoDA1.dir/src/Interface/DirectionsMenu.cpp.obj
-.PHONY : src/Interface/DirectionsMenu.cpp.obj
-
-src/Interface/DirectionsMenu.i: src/Interface/DirectionsMenu.cpp.i
-.PHONY : src/Interface/DirectionsMenu.i
-
-# target to preprocess a source file
-src/Interface/DirectionsMenu.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TrabalhoDA1.dir\build.make CMakeFiles/TrabalhoDA1.dir/src/Interface/DirectionsMenu.cpp.i
-.PHONY : src/Interface/DirectionsMenu.cpp.i
-
-src/Interface/DirectionsMenu.s: src/Interface/DirectionsMenu.cpp.s
-.PHONY : src/Interface/DirectionsMenu.s
-
-# target to generate assembly for a file
-src/Interface/DirectionsMenu.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TrabalhoDA1.dir\build.make CMakeFiles/TrabalhoDA1.dir/src/Interface/DirectionsMenu.cpp.s
-.PHONY : src/Interface/DirectionsMenu.cpp.s
-
 src/Interface/Menu.obj: src/Interface/Menu.cpp.obj
 .PHONY : src/Interface/Menu.obj
 
@@ -223,30 +199,6 @@ src/Interface/Menu.s: src/Interface/Menu.cpp.s
 src/Interface/Menu.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\TrabalhoDA1.dir\build.make CMakeFiles/TrabalhoDA1.dir/src/Interface/Menu.cpp.s
 .PHONY : src/Interface/Menu.cpp.s
-
-src/Interface/OptionsMenu.obj: src/Interface/OptionsMenu.cpp.obj
-.PHONY : src/Interface/OptionsMenu.obj
-
-# target to build an object file
-src/Interface/OptionsMenu.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TrabalhoDA1.dir\build.make CMakeFiles/TrabalhoDA1.dir/src/Interface/OptionsMenu.cpp.obj
-.PHONY : src/Interface/OptionsMenu.cpp.obj
-
-src/Interface/OptionsMenu.i: src/Interface/OptionsMenu.cpp.i
-.PHONY : src/Interface/OptionsMenu.i
-
-# target to preprocess a source file
-src/Interface/OptionsMenu.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TrabalhoDA1.dir\build.make CMakeFiles/TrabalhoDA1.dir/src/Interface/OptionsMenu.cpp.i
-.PHONY : src/Interface/OptionsMenu.cpp.i
-
-src/Interface/OptionsMenu.s: src/Interface/OptionsMenu.cpp.s
-.PHONY : src/Interface/OptionsMenu.s
-
-# target to generate assembly for a file
-src/Interface/OptionsMenu.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TrabalhoDA1.dir\build.make CMakeFiles/TrabalhoDA1.dir/src/Interface/OptionsMenu.cpp.s
-.PHONY : src/Interface/OptionsMenu.cpp.s
 
 src/Interface/System.obj: src/Interface/System.cpp.obj
 .PHONY : src/Interface/System.obj
@@ -335,15 +287,9 @@ help:
 	@echo ... src/Controller.obj
 	@echo ... src/Controller.i
 	@echo ... src/Controller.s
-	@echo ... src/Interface/DirectionsMenu.obj
-	@echo ... src/Interface/DirectionsMenu.i
-	@echo ... src/Interface/DirectionsMenu.s
 	@echo ... src/Interface/Menu.obj
 	@echo ... src/Interface/Menu.i
 	@echo ... src/Interface/Menu.s
-	@echo ... src/Interface/OptionsMenu.obj
-	@echo ... src/Interface/OptionsMenu.i
-	@echo ... src/Interface/OptionsMenu.s
 	@echo ... src/Interface/System.obj
 	@echo ... src/Interface/System.i
 	@echo ... src/Interface/System.s

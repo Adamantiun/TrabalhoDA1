@@ -5,18 +5,24 @@
 #include "Truck.h"
 
 Truck::Truck() {
+    this->id=0;
     this->cost=0;
     this->volMax=0;
     this->weightMax=0;
 }
 
-Truck::Truck(const int &volMax, const int &weightMax, const int &cost) {
+Truck::Truck(const int &id, const int &volMax, const int &weightMax, const int &cost) {
+    this->id=id;
     this->cost=cost;
     this->volMax=volMax;
     this->weightMax=weightMax;
 }
 
 Truck::~Truck() {}
+
+const int &Truck::getId() const {
+    return id;
+}
 
 const int &Truck::getCost() const {
     return cost;
@@ -28,6 +34,10 @@ const int &Truck::getVolMax() const {
 
 const int &Truck::getWeightMax() const {
     return weightMax;
+}
+
+void Truck::setId(const int &id) {
+    this->id=id;
 }
 
 void Truck::setCost(const int &cost) {

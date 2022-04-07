@@ -10,6 +10,7 @@ using namespace std;
 
 class Truck {
 private:
+    int id;
     int volMax;
     int weightMax;
     int cost;
@@ -20,13 +21,16 @@ public:
     Truck();
 
     /** @brief Received the necessary attributes to create a Order object.*/
-    Truck(const int &volMax, const int &weightMax, const int &cost);
+    Truck(const int &id, const int &volMax, const int &weightMax, const int &cost);
 
     //Deconstructors
     /** @brief  Default destructor.*/
     ~Truck();
 
     //Gets
+    /** @brief  Get id attribute.*/
+    const int &getId() const;
+
     /** @brief  Get volMax attribute.*/
     const int &getVolMax() const;
 
@@ -40,6 +44,9 @@ public:
 
 
     //Sets
+    /** @brief  Set id attribute.*/
+    void setId(const int &id);
+
     /** @brief  Set volMax attribute.*/
     void setVolMax(const int &volMax);
 
