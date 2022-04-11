@@ -13,10 +13,6 @@
 
 Controller::Controller() {
     readTrucks();
-    for(auto i = 1;i<=6;i++){
-        readOrders(i);
-    }
-    scenery1();
 }
 
 void Controller::readTrucks() {
@@ -50,7 +46,7 @@ bool Controller::readOrders(int orderNo) {
     if (ordersFile.fail()) {
         return false;
     }
-  //  orderDB.clear();
+  orderDB.clear();
     string line;
     getline(ordersFile,line);
     while (!ordersFile.eof() && ordersFile.peek()!='\n') {

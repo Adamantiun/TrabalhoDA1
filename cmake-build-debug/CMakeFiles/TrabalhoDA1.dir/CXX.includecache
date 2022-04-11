@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Controller.cpp
+Controller.h
+C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Controller.h
+iostream
+-
+iomanip
+-
+string
+-
+fstream
+-
+cmath
+-
+algorithm
+-
+
+C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Controller.h
+Truck.h
+C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Truck.h
+Order.h
+C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Order.h
+vector
+-
+string
+-
+set
+-
+
+C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Order.h
+
+C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/src/Truck.h
+
