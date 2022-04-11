@@ -103,7 +103,7 @@ public:
 
     vector <Order> scenery3();
 
-    int scenery1();
+    vector<Truck> scenery1();
 };
 
 #endif //PROJ1_CONTROLLER_H

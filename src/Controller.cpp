@@ -218,7 +218,7 @@ int Controller::scenery1(){
 */
 
 
-int Controller::scenery1(){
+vector<Truck> Controller::scenery1(){
     //FIRST FIT
 
     //*********************************************** ORDENACAO DAS ORDERS********************************************
@@ -233,7 +233,7 @@ int Controller::scenery1(){
     for(int i = 0; i<orderdb.size();i++){
         orderdb[i].setRankingWei(i);
     }
-    //faço sort pelo volume
+    //faco sort pelo volume
     sort(orderdbyVol.begin(),orderdbyVol.end(),cmpVol);
     //estabeleco uma especie de ranking pelo volume
     for(int i = 0; i<orderdbyVol.size();i++){
@@ -283,6 +283,7 @@ int Controller::scenery1(){
     int j = 0;
     set<int> a;
     set<int> trucksIDS;
+    vector<Truck> trucksUsed;
     for (int i = 0; i < n; i++) {
         // If this item can't f it in current bin
         if (orderdbyVol[i].getWeight() > truckbyVol[j].getWeightMax() ||orderdbyVol[i].getVol() > truckbyVol[j].getVolMax()  ) {
@@ -293,10 +294,14 @@ int Controller::scenery1(){
             trucksIDS.insert(truckbyVol[j].getId());
             truckbyVol[j].setWeightMax(truckbyVol[j].getWeightMax() - orderdbyVol[i].getWeight()); //mudo o tamanho
             truckbyVol[j].setVolMax(truckbyVol[j].getVolMax() - orderdbyVol[i].getVol()); //mudo o VOL
+            truckbyVol[j].addOrder(orderdbyVol[i]);
             j = 0;
         }
     }
-    return a.size();
+    for(auto x:a){
+        trucksUsed.push_back(truckbyVol[x]);
+    }
+    return trucksUsed;
 }
 
 /*
@@ -356,6 +361,7 @@ int Controller::scenery1(){
     int a = f(orderDB.size(),truckDB[0].getWeightMax(),truckDB[0].getVolMax(),memo,orderDB);
 }
 */
+
 
 
 
