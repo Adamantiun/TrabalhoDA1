@@ -6,6 +6,8 @@
 #define TRABALHODA1_TRUCK_H
 
 
+#include "Order.h"
+#include <vector>
 using namespace std;
 
 class Truck {
@@ -15,6 +17,12 @@ private:
     int weightMax;
     int cost;
     int RankingWei;
+    vector<Order> ordersInside;
+public:
+    const vector<Order> &getOrdersInside() const;
+
+    void setOrdersInside(const vector<Order> &ordersInside);
+
 public:
     int getRankingWei() const;
 
@@ -69,6 +77,6 @@ public:
     void setCost(const int &cost);
 
 
-
+    void addOrder(Order &order);
 };
 #endif //TRABALHODA1_TRUCK_H

@@ -68,3 +68,15 @@ void Truck::setRankingVol(int rankingVol) {
     RankingVol = rankingVol;
 }
 
+void Truck::addOrder(Order &order) {
+    ordersInside.push_back(order);
+}
+
+const vector<Order> &Truck::getOrdersInside() const {
+    return ordersInside;
+}
+
+void Truck::setOrdersInside(const vector<Order> &ordersInside) {
+    Truck::ordersInside = ordersInside;
+}
+
