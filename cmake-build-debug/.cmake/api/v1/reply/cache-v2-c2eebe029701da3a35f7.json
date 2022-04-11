@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/cmake-build-debug"
+			"value" : "c:/Users/josea/GitTrab/DA/TrabalhoDA1/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -719,7 +719,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1"
+			"value" : "C:/Users/josea/GitTrab/DA/TrabalhoDA1"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1339,7 +1339,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/cmake-build-debug"
+			"value" : "C:/Users/josea/GitTrab/DA/TrabalhoDA1/cmake-build-debug"
 		},
 		{
 			"name" : "TrabalhoDA1_SOURCE_DIR",
@@ -1351,7 +1351,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1"
+			"value" : "C:/Users/josea/GitTrab/DA/TrabalhoDA1"
 		}
 	],
 	"kind" : "cache",

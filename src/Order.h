@@ -14,6 +14,16 @@ private:
     int weight;
     int reward;
     int duration;
+    int rankingVol;
+    int rankingWei;
+public:
+    int getRankingVol() const;
+
+    void setRankingVol(int rankingVol);
+
+    int getRankingWei() const;
+
+    void setRankingWei(int rankingWei);
 
 public:
     //Constructors

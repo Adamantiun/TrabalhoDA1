@@ -52,3 +52,19 @@ void Truck::setWeightMax(const int &weightMax) {
     this->weightMax=weightMax;
 }
 
+int Truck::getRankingWei() const {
+    return RankingWei;
+}
+
+void Truck::setRankingWei(int rankingWei) {
+    RankingWei = rankingWei;
+}
+
+int Truck::getRankingVol() const {
+    return RankingVol;
+}
+
+void Truck::setRankingVol(int rankingVol) {
+    RankingVol = rankingVol;
+}
+

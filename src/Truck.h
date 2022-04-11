@@ -14,6 +14,18 @@ private:
     int volMax;
     int weightMax;
     int cost;
+    int RankingWei;
+public:
+    int getRankingWei() const;
+
+    void setRankingWei(int rankingWei);
+
+    int getRankingVol() const;
+
+    void setRankingVol(int rankingVol);
+
+private:
+    int RankingVol;
 
 public:
     //Constructors

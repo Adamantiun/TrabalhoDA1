@@ -66,3 +66,19 @@ bool Order::operator<(const Order &o) {
     if(o.duration< this->duration) return false;
     return true;
 }
+
+int Order::getRankingVol() const {
+    return rankingVol;
+}
+
+void Order::setRankingVol(int rankingVol) {
+    Order::rankingVol = rankingVol;
+}
+
+int Order::getRankingWei() const {
+    return rankingWei;
+}
+
+void Order::setRankingWei(int rankingWei) {
+    Order::rankingWei = rankingWei;
+}

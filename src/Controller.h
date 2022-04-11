@@ -10,7 +10,7 @@
 #include "Order.h"
 #include <vector>
 #include <string>
-
+#include <set>
 class Controller{
 private:
     vector<Order> orderDB;
@@ -102,6 +102,8 @@ public:
     void setUsername(string username);
 
     vector <Order> scenery3();
+
+    int scenery1();
 };
 
 #endif //PROJ1_CONTROLLER_H
