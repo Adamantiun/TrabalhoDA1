@@ -27,20 +27,21 @@ System::System() {
             orderOption = baseMenu.intInputMenu("Hello! Please select an order to process!", "This order does not exists!");
         int sceneryOption = baseMenu.printOptionsMenu(baseMenu.getMainOps(), "Please select a way to process your order");
 
+        if(sceneryOption == 2){
+            vector<Order> ordersVec = controller.scenery3();
+            baseMenu.anyInputMenu(getPrintableScenery3(ordersVec));
+        }
+
         if (orderOption == "x") break;
     }
 }
 
-string System::fixString(string str) {
-    size_t index = 0;
-    while (true) {
-        index = str.find("├", index);
-        if (index == std::string::npos) break;
-        cout<<"hey\n";
-        str.replace(index, 1, "E");
-
-        index += 1;
+string System::getPrintableScenery3(const std::vector<Order>& orders) {
+    string ret = "Here are the Orders, by ID, arranged for delivery:\n";
+    for(auto o : orders){
+        ret += "  -" + to_string(o.getId()) + "\n";
     }
-    str = regex_replace(str, regex("├"), "E");
-    return str;
+    return ret;
 }
+
+

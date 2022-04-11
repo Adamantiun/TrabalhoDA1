@@ -237,7 +237,7 @@ int Controller::scenery1(){
     for(int i = 0; i<orderdb.size();i++){
         orderdb[i].setRankingWei(i);
     }
-    //faco sort pelo volume
+    //faço sort pelo volume
     sort(orderdbyVol.begin(),orderdbyVol.end(),cmpVol);
     //estabeleco uma especie de ranking pelo volume
     for(int i = 0; i<orderdbyVol.size();i++){

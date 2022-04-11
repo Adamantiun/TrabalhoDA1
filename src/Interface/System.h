@@ -17,7 +17,7 @@ public:
     System();
     Controller& getController() {return controller;}
     static void clearScreen();
-    static string fixString(string str);
+    string getPrintableScenery3(const std::vector<Order>&);
 };
 #endif //PROJ1_SYSTEM_H
 
