@@ -18,6 +18,7 @@ public:
     Controller& getController() {return controller;}
     static void clearScreen();
     string getPrintableScenery3(const std::vector<Order>&);
+    string getPrintableScenery1(const std::vector<Truck>&);
 };
 #endif //PROJ1_SYSTEM_H
 

@@ -33,13 +33,13 @@ int Menu::printOptionsMenu(vector<string> options, string header, string footer)
 }
 
 void Menu::printLowerFrame(){
-    for (size_t i = 0; i < 60; i++)
+    for (size_t i = 0; i < 62; i++)
         cout << (char)205;
     cout << endl;
 }
 
 void Menu::printUpperFrame() {
-    for (size_t i = 0; i < 52; i++)
+    for (size_t i = 0; i < 54; i++)
         cout << (char)205;
     cout << (char)185 <<"Q:Quit" << (char)204 << endl;
 }

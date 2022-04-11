@@ -1,3 +1,3 @@
-C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/cmake-build-debug/CMakeFiles/TrabalhoDA1.dir
-C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/35196/OneDrive/Documentos/GitHub/TrabalhoDA1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/ADAM/Desktop/DA/TrabalhoDA1/TrabalhoDA1/cmake-build-debug/CMakeFiles/TrabalhoDA1.dir
+D:/ADAM/Desktop/DA/TrabalhoDA1/TrabalhoDA1/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/ADAM/Desktop/DA/TrabalhoDA1/TrabalhoDA1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
