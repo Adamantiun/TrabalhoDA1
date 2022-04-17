@@ -78,6 +78,8 @@ public:
     /** @brief  Set cost attribute.*/
     void setCost(const int &cost);
 
+    /** @brief Empties truck's orders.*/
+    void emptyTruck();
 
     void addOrder(Order &order);
     void add(Order &order);

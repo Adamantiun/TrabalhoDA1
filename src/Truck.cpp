@@ -93,5 +93,9 @@ bool Truck::operator==(const Truck &o) {
     if(o.getId() == this->getId()) return true;
         return false;}
 
+void Truck::emptyTruck() {
+    orderss.clear();
+}
+
 
 

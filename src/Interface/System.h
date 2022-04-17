@@ -19,6 +19,7 @@ public:
     static void clearScreen();
     string getPrintableScenery3(const std::vector<Order>&);
     string getPrintableScenery1(const std::vector<Truck>&);
+    string getPrintableScenery2(const vector<Truck> & trucks, int profit);
 };
 #endif //PROJ1_SYSTEM_H
 

@@ -105,18 +105,22 @@ public:
 
     vector<Truck> scenery1();
 
-    int scenery2();
+    vector<struct Truck> scenery2(int& getProfit);
 
     double deviation(int rank1, int rank2);
 
-  //  int solve(Truck truck);
+  //  int processTruck(Truck truck);
 
     int fu(int ind, int weight, int vol);
 
-    int solve(Truck &truck);
+    int processTruck(Truck &truck);
 
 
-    void printSelectedElements(vector<vector<vector<int>>> &dp, Truck &truck);
+    void processSelectedOrders(vector<vector<vector<int>>> &dp, Truck &truck);
+
+    void sortTruckDBforS2();
+
+    static bool compareCostBenefit(const Truck &t1, const Truck &t2);
 };
 
 #endif //PROJ1_CONTROLLER_H

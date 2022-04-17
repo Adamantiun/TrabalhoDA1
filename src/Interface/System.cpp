@@ -31,6 +31,11 @@ System::System() {
             vector<Truck> trucksVec = controller.scenery1();
             baseMenu.singleInputScreen(getPrintableScenery1(trucksVec));
         }
+        if(sceneryOption == 1){
+            int totalProfit = 0;
+            vector<Truck> trucksVec = controller.scenery2(totalProfit);
+            baseMenu.singleInputScreen(getPrintableScenery2(trucksVec, totalProfit));
+        }
         if(sceneryOption == 2){
             vector<Order> ordersVec = controller.scenery3();
             baseMenu.singleInputScreen(getPrintableScenery3(ordersVec));
@@ -71,6 +76,12 @@ string System::getPrintableScenery1(const vector<Truck> & trucks) {
         ret += orders + "\n";
     }
     ret.resize(ret.size()-1);
+    return ret;
+}
+
+string System::getPrintableScenery2(const vector<Truck> & trucks, int profit) {
+    string ret = getPrintableScenery1(trucks);
+    ret += "\nTotal profit: " + to_string(profit);
     return ret;
 }
 
