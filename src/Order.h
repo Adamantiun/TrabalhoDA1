@@ -70,7 +70,8 @@ public:
     /** @brief  Set code attribute.*/
     void setDuration(const int &duration);
 
-    bool operator<(const Order& o);
+    bool operator<(const Order& o) const;
+    bool operator==(const Order& o) const;
 
 };
 #endif //TRABALHODA1_ORDER_H

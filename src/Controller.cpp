@@ -9,10 +9,15 @@
 #include <fstream>
 #include <cmath>
 #include <algorithm>
+#include <xmath.h>
+#include <functional>
 
 
 Controller::Controller() {
     readTrucks();
+    for(auto i = 0; i<=6;i++)
+    readOrders(i);
+    scenery2();
 }
 
 void Controller::readTrucks() {
@@ -46,7 +51,7 @@ bool Controller::readOrders(int orderNo) {
     if (ordersFile.fail()) {
         return false;
     }
-  orderDB.clear();
+   // orderDB.clear();
     string line;
     getline(ordersFile,line);
     while (!ordersFile.eof() && ordersFile.peek()!='\n') {
@@ -217,13 +222,21 @@ int Controller::scenery1(){
 }
 */
 
+double Controller::deviation(int rank1,int rank2){
 
+    if((rank1 + rank2) == 0 ) return 1;
+    double media = (rank1+rank2)/2.0;
+    double deviation = 0;
+    deviation += pow(rank1 - media, 2);
+    deviation += pow(rank2 - media, 2);
+    return deviation;
+}
 vector<Truck> Controller::scenery1(){
     //FIRST FIT
 
     //*********************************************** ORDENACAO DAS ORDERS********************************************
     auto cmp = [] (Order order1, Order order2){ return order1.getWeight()>order2.getWeight();};
-    auto cmpVol = [] (Order order1, Order order2){ return order1.getVol()>order2.getVol();};
+    auto cmpVol = [] (Order order1, Order order2){return order1.getVol()>order2.getVol();};
     auto cmpID = []  (Order order1, Order order2){ return order1.getId()>order2.getId();};
     vector<Order> orderdb = orderDB;
     vector<Order> orderdbyVol = orderDB;
@@ -246,8 +259,8 @@ vector<Truck> Controller::scenery1(){
     for(int i = 0; i<orderdbyVol.size();i++){
         orderdbyVol[i].setRankingWei(orderdb[i].getRankingWei());
     }
-    auto cmpRak = []  (Order order1, Order order2){ return (order1.getRankingWei()+order1.getRankingVol())/2<
-                                                           (order2.getRankingWei()+order2.getRankingVol())/2;};
+    auto cmpRak = [this]  (Order order1, Order order2){ if((order1.getRankingWei()+order1.getRankingVol())/2.0==(order2.getRankingWei()+order2.getRankingVol())/2.0)return deviation(order1.getRankingWei(),order1.getRankingVol()) < deviation(order2.getRankingWei(),order2.getRankingVol());
+    else return (order1.getRankingWei()+order1.getRankingVol())/2.0<(order2.getRankingWei()+order2.getRankingVol())/2.0 ;};
     //orderno pela media entre os dois
     sort(orderdbyVol.begin(),orderdbyVol.end(),cmpRak);
     //ordeno o vector dos caminhoes, teoricamente tem que seguir uma abordagem semelhante, mas ainda nao foi implementada
@@ -268,6 +281,8 @@ vector<Truck> Controller::scenery1(){
     for(int i = 0; i<truckbyVol.size();i++){
         truckbyVol[i].setRankingVol(i);
     }
+    auto vec2 = truckbyVol;
+    auto vec3 = aux2;
     //sort both by id
     sort(truckbyVol.begin(),truckbyVol.end(),cmpTruckID);
     sort(aux2.begin(),aux2.end(),cmpTruckID);
@@ -275,8 +290,9 @@ vector<Truck> Controller::scenery1(){
     for(int i = 0; i<truckbyVol.size();i++){
         truckbyVol[i].setRankingWei(aux2[i].getRankingWei());
     }
-    auto cmpTruckRak = []  (Truck truck1, Truck truck2){ return (truck1.getRankingWei()+truck1.getRankingVol())/2<
-                                                                (truck2.getRankingWei()+truck2.getRankingVol())/2;};
+    auto cmpTruckRak = [this]  (Truck truck1, Truck truck2){
+        if((truck1.getRankingWei()+truck1.getRankingVol())/2.0==(truck2.getRankingWei()+truck2.getRankingVol())/2.0)return deviation(truck1.getRankingWei(),truck1.getRankingVol()) < deviation(truck2.getRankingWei(),truck2.getRankingVol());
+        else return (truck1.getRankingWei()+truck1.getRankingVol())/2.0<(truck2.getRankingWei()+truck2.getRankingVol())/2.0 ;};
     //orderno pela media entre os dois
     sort(truckbyVol.begin(),truckbyVol.end(),cmpTruckRak);
     int n = orderdb.size();
@@ -285,9 +301,13 @@ vector<Truck> Controller::scenery1(){
     set<int> trucksIDS;
     vector<Truck> trucksUsed;
     for (int i = 0; i < n; i++) {
+        if(orderdbyVol[i].getWeight()>vec3[0].getWeightMax() || orderdbyVol[i].getVol()> vec2[0].getVolMax()){
+            continue;
+        }
         // If this item can't f it in current bin
         if (orderdbyVol[i].getWeight() > truckbyVol[j].getWeightMax() ||orderdbyVol[i].getVol() > truckbyVol[j].getVolMax()  ) {
             j++;
+            i--;
         }
         else {
             a.insert(j);
@@ -304,63 +324,109 @@ vector<Truck> Controller::scenery1(){
     return trucksUsed;
 }
 
-/*
-int Controller::scenery1(){
-    //BEST FIT
-    auto cmp = [] (Order order1, Order order2){ return order1.getWeight()<order2.getWeight();};
-    auto cmpTruck = [] ( Truck truck1, Truck truck2 ) {return truck1.getWeightMax()<truck2.getWeightMax();};
-    vector<Order> orderdb = orderDB;
-    vector<Truck> aux2 = truckDB;
 
-    int n = orderdb.size();
-    int j = 0;
-    set<int> a;
-    int bin_rem = truckDB[0].getWeightMax();
-    for (int i = 0; i < n; i++) {
-        // If this item can't fit in current bin
-        if (orderdb[i].getWeight() > aux2[j].getWeightMax() ||orderdb[i].getVol() > aux2[j].getVolMax()  ) {
-            j++;
-        }
-        else {
-            a.insert(j);
-            aux2[j].setWeightMax(aux2[j].getWeightMax() - orderdb[i].getWeight()); //mudo o tamanho
-            aux2[j].setVolMax(aux2[j].getVolMax() - orderdb[i].getVol()); //mudo o VOL
-            j = 0;
-        }
-    }
-    for (int i = 0; i < n; i++){
-        // Find the best bin that can accomodate weight1[i]
-        int j;
-        // We have to initialize minimum space left and index of best bin
-        // c is capacity
-        int min = C + 1, bi = 0;
-        for (j = 0; j < truckDB[j].getWeight(); j++){
-            if (bin_rem[j] >= weight1[i] && bin_rem[j] - weight1[i] < min) {
-                bi = j;
-                min = bin_rem[j] - weight1[i];
-            }
 
-    return a.size();
-}
-*/
-/*
-int f(int ind, int weight, int vol, int *memo,vector<Order> Array){
+
+
+
+int memo[452][395][391];
+int Controller::fu(int ind, int weight, int vol){
 
     if(weight < 0 || vol < 0 ) return -INF;
-    if(ind == Array.size()) return 0;
-    int &ret= memo[ind,weight,vol];
+    if(ind == truckDB[0].getOrdersInside().size()) return 0;
+    int &ret= memo[ind][weight][vol];
     if(ret>0) return ret;
     int res = 0;
-    for(int i=0;i<=75;i++)
-        res = max(res, f(ind+1, weight-i*Array[ind].getWeight(), vol-i*Array[ind].getVol(),memo,Array));
+    for(int i=0;i<= truckDB[0].getOrdersInside().size();i++)
+        res = max(res,i*orderDB[ind].getReward()+ fu(ind+1, weight-i*orderDB[ind].getWeight(), vol-i*orderDB[ind].getVol()));
     return ret = res;
 }
-int Controller::scenery1(){
-    setMemo(memo);
-    int memo[orderDB.size()][truckDB[0].getWeightMax()][truckDB[0].getVolMax()];
-    int a = f(orderDB.size(),truckDB[0].getWeightMax(),truckDB[0].getVolMax(),memo,orderDB);
+//SOME GLOBAL VARIABLES
+set<int> check;
+int total = 0;
+int Controller::solve(Truck &truck){
+    if (truck.getVolMax() <= 0 || truck.getWeightMax()<=0) {
+        return 0;
+    }
+    int n = orderDB.size();
+    // we have 2 capacities, one of weight and other of volume
+    vector<vector<vector<int>>>dp(n, vector<vector<int>>(truck.getWeightMax() + 1,vector<int>(truck.getVolMax()+1)));
+
+    for (int i = 0; i < n; i++) {
+        dp[i][0][0] = 0;
+    }
+    // if we have only one weight, we will take it if it is not more than the capacity
+    for (int c = 0; c <= truck.getWeightMax(); c++) {
+        for(int j= 0; j<= truck.getVolMax();j++){
+            if (orderDB[0].getWeight() <= c && orderDB[0].getVol() <= j) {
+                dp[0][c][j] = orderDB[0].getReward();
+            }
+        }
+    }
+    // process all sub-arrays for all the capacities
+    for (int i = 1; i < n; i++) {
+        for (int c = 1; c <= truck.getWeightMax() ; c++) {
+            for(int j = 1; j <= truck.getVolMax(); j++){
+                int profit1 = 0, profit2 = 0;
+                // include the item, if it is not more than the capacity
+                if (orderDB[i].getWeight() <= c && orderDB[i].getVol()<=j) {
+                    profit1 = orderDB[i].getReward() + dp[i - 1][c - orderDB[i].getWeight()][j - orderDB[i].getVol()];
+                }
+                // exclude the item
+                profit2 = dp[i - 1][c][j];
+                // take maximum
+                dp[i][c][j] = max(profit1, profit2);
+            }
+        }
+    }
+
+    // maximum profit will be at the bottom-right corner.
+    printSelectedElements(dp);
+    return dp[n - 1][truck.getWeightMax()][truck.getVolMax()];
+
 }
-*/
+void Controller::printSelectedElements(vector<vector<vector<int>>> &dp) {
+    cout << "Selected weights:";
+    int totalProfit = dp[orderDB.size() - 1][truckDB[0].getWeightMax()][truckDB[0].getVolMax()];
+    cout<<endl<<totalProfit<<endl;
+    for (int i = orderDB.size() - 1; i > 0; i--) {
+            if (totalProfit != dp[i - 1][ truckDB[0].getWeightMax()][truckDB[0].getVolMax()]) {
+                cout << " " << orderDB[i].getWeight()<<" || "<<orderDB[i].getVol();
+                check.insert(orderDB[i].getId());
+                truckDB[0].addOrder(orderDB[i]);
+                total+=orderDB[i].getReward();
+                truckDB[0].setWeightMax(truckDB[0].getWeightMax()- orderDB[i].getWeight());
+                truckDB[0].setVolMax(truckDB[0].getVolMax()- orderDB[i].getVol());
+                totalProfit -= orderDB[i].getReward();
+            }
+        }
+
+
+
+    if (totalProfit != 0) {
+        cout << " " << orderDB[0].getWeight() << " || "<<orderDB[0].getVol();
+        truckDB[0].addOrder(orderDB[0]);
+        check.insert(orderDB[0].getId());
+
+    }
+    cout << "" << endl;
+}
+int Controller::scenery2(){
+    //vector<vector<vector<int>>>memo(orderDB.size(), vector< vector<int> >(truckDB[0].getWeightMax() , vector<int>(truckDB[0].getVolMax())));
+    int aa = orderDB.size();
+    int b = truckDB[0].getWeightMax();
+    int c = truckDB[0].getVolMax();
+    // 75 395 391
+    //  int memo[orderDB.size()][truckDB[0].getWeightMax()][truckDB[0].getVolMax()];
+    std::function<int(int,int,int)> f;
+    vector<Order> Array = orderDB;
+    int a = fu(0, truckDB[0].getWeightMax(), truckDB[0].getVolMax());
+    int bb = solve(truckDB[0]);
+    int cc = check.size();
+    set<int> copy = check;
+    return a;
+}
+
 
 
 

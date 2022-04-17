@@ -8,6 +8,7 @@
 
 #include "Order.h"
 #include <vector>
+#include <set>
 using namespace std;
 
 class Truck {
@@ -18,6 +19,7 @@ private:
     int cost;
     int RankingWei;
     vector<Order> ordersInside;
+    set<Order> orderss;
 public:
     const vector<Order> &getOrdersInside() const;
 
@@ -78,5 +80,9 @@ public:
 
 
     void addOrder(Order &order);
+    void add(Order &order);
+    bool operator<(const Truck& o);
+    bool operator==(const Truck& o);
+
 };
 #endif //TRABALHODA1_TRUCK_H

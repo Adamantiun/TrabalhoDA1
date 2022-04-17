@@ -62,7 +62,7 @@ void Order::setReward(const int &reward) {
 void Order::setVol(const int &vol) {
     this->vol=vol;
 }
-bool Order::operator<(const Order &o) {
+bool Order::operator<(const Order &o) const {
     if(o.duration< this->duration) return false;
     return true;
 }
@@ -81,4 +81,9 @@ int Order::getRankingWei() const {
 
 void Order::setRankingWei(int rankingWei) {
     Order::rankingWei = rankingWei;
+}
+
+bool Order::operator==(const Order &o) const {
+    if(o.id==this->id) return true;
+     return false;
 }

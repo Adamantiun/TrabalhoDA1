@@ -104,6 +104,18 @@ public:
     vector <Order> scenery3();
 
     vector<Truck> scenery1();
+
+    int scenery2();
+
+    double deviation(int rank1, int rank2);
+
+  //  int solve(Truck truck);
+
+    int fu(int ind, int weight, int vol);
+
+    int solve(Truck &truck);
+
+    void printSelectedElements(vector<vector<vector<int>>> &dp);
 };
 
 #endif //PROJ1_CONTROLLER_H

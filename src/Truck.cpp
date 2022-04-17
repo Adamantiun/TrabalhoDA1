@@ -80,3 +80,18 @@ void Truck::setOrdersInside(const vector<Order> &ordersInside) {
     Truck::ordersInside = ordersInside;
 }
 
+void Truck::add(Order &order) {
+ orderss.insert(order);
+}
+
+bool Truck::operator<(const Truck &o) {
+    if(o.getId()< this->getId()) return false;
+    return true;
+}
+
+bool Truck::operator==(const Truck &o) {
+    if(o.getId() == this->getId()) return true;
+        return false;}
+
+
+
