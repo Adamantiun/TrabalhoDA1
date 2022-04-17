@@ -115,7 +115,8 @@ public:
 
     int solve(Truck &truck);
 
-    void printSelectedElements(vector<vector<vector<int>>> &dp);
+
+    void printSelectedElements(vector<vector<vector<int>>> &dp, Truck &truck);
 };
 
 #endif //PROJ1_CONTROLLER_H

@@ -15,9 +15,6 @@
 
 Controller::Controller() {
     readTrucks();
-    for(auto i = 0; i<=6;i++)
-    readOrders(i);
-    scenery2();
 }
 
 void Controller::readTrucks() {
@@ -51,7 +48,7 @@ bool Controller::readOrders(int orderNo) {
     if (ordersFile.fail()) {
         return false;
     }
-   // orderDB.clear();
+   orderDB.clear();
     string line;
     getline(ordersFile,line);
     while (!ordersFile.eof() && ordersFile.peek()!='\n') {
@@ -325,25 +322,6 @@ vector<Truck> Controller::scenery1(){
 }
 
 
-
-
-
-
-int memo[452][395][391];
-int Controller::fu(int ind, int weight, int vol){
-
-    if(weight < 0 || vol < 0 ) return -INF;
-    if(ind == truckDB[0].getOrdersInside().size()) return 0;
-    int &ret= memo[ind][weight][vol];
-    if(ret>0) return ret;
-    int res = 0;
-    for(int i=0;i<= truckDB[0].getOrdersInside().size();i++)
-        res = max(res,i*orderDB[ind].getReward()+ fu(ind+1, weight-i*orderDB[ind].getWeight(), vol-i*orderDB[ind].getVol()));
-    return ret = res;
-}
-//SOME GLOBAL VARIABLES
-set<int> check;
-int total = 0;
 int Controller::solve(Truck &truck){
     if (truck.getVolMax() <= 0 || truck.getWeightMax()<=0) {
         return 0;
@@ -379,25 +357,25 @@ int Controller::solve(Truck &truck){
             }
         }
     }
-
-    // maximum profit will be at the bottom-right corner.
-    printSelectedElements(dp);
-    return dp[n - 1][truck.getWeightMax()][truck.getVolMax()];
+    int totalProfit = dp[orderDB.size() - 1][truck.getWeightMax()][truck.getVolMax()];
+    printSelectedElements(dp,truck);
+    return totalProfit;
 
 }
-void Controller::printSelectedElements(vector<vector<vector<int>>> &dp) {
+void Controller::printSelectedElements(vector<vector<vector<int>>> &dp,Truck &truck) {
+    //FUNCAO PRA PRINTAR AS ORDERS QUE TAO DENTRO DO TRUCK
     cout << "Selected weights:";
-    int totalProfit = dp[orderDB.size() - 1][truckDB[0].getWeightMax()][truckDB[0].getVolMax()];
+    int totalProfit = dp[orderDB.size() - 1][truck.getWeightMax()][truck.getVolMax()];
     cout<<endl<<totalProfit<<endl;
     for (int i = orderDB.size() - 1; i > 0; i--) {
-            if (totalProfit != dp[i - 1][ truckDB[0].getWeightMax()][truckDB[0].getVolMax()]) {
+            if (totalProfit != dp[i - 1][ truck.getWeightMax()][truck.getVolMax()]) {
                 cout << " " << orderDB[i].getWeight()<<" || "<<orderDB[i].getVol();
-                check.insert(orderDB[i].getId());
-                truckDB[0].addOrder(orderDB[i]);
-                total+=orderDB[i].getReward();
-                truckDB[0].setWeightMax(truckDB[0].getWeightMax()- orderDB[i].getWeight());
-                truckDB[0].setVolMax(truckDB[0].getVolMax()- orderDB[i].getVol());
+                truck.addOrder(orderDB[i]);
+                truck.setWeightMax(truck.getWeightMax()- orderDB[i].getWeight());
+                truck.setVolMax(truck.getVolMax()- orderDB[i].getVol());
                 totalProfit -= orderDB[i].getReward();
+                orderDB.erase(orderDB.begin()+i);
+                i++;
             }
         }
 
@@ -406,25 +384,33 @@ void Controller::printSelectedElements(vector<vector<vector<int>>> &dp) {
     if (totalProfit != 0) {
         cout << " " << orderDB[0].getWeight() << " || "<<orderDB[0].getVol();
         truckDB[0].addOrder(orderDB[0]);
-        check.insert(orderDB[0].getId());
+        orderDB.erase(orderDB.begin());
 
     }
     cout << "" << endl;
 }
 int Controller::scenery2(){
-    //vector<vector<vector<int>>>memo(orderDB.size(), vector< vector<int> >(truckDB[0].getWeightMax() , vector<int>(truckDB[0].getVolMax())));
-    int aa = orderDB.size();
-    int b = truckDB[0].getWeightMax();
-    int c = truckDB[0].getVolMax();
-    // 75 395 391
-    //  int memo[orderDB.size()][truckDB[0].getWeightMax()][truckDB[0].getVolMax()];
-    std::function<int(int,int,int)> f;
-    vector<Order> Array = orderDB;
-    int a = fu(0, truckDB[0].getWeightMax(), truckDB[0].getVolMax());
-    int bb = solve(truckDB[0]);
-    int cc = check.size();
-    set<int> copy = check;
-    return a;
+    int total = 0;
+    for(auto i = 0; i< truckDB.size();i++){
+        if(orderDB.size() != 0) {
+            int RewardPerTruck = solve(truckDB[i]);
+            if(RewardPerTruck == 0) {
+                continue;
+                // O PROBLEMA AQUI TA PQ TEM ORDER QUE NAO ENCAIXA EM NENHUM CAMINHAO, SUGIRO TIRAR ELAS ANTES DO CODIGO RODAR
+            }
+            int costPerTruck =  truckDB[i].getCost();
+            int profitPerTruck = RewardPerTruck - costPerTruck;
+            if(profitPerTruck <= 0) {
+                    cout<<endl<<"ficou negativo"<<endl;
+            }
+            if((profitPerTruck+truckDB[i].getCost()) == 1872) {
+                cout<<"test";
+            }
+            total += profitPerTruck;
+            cout<<"Total : "<<total<<" MONEYS"<<endl;
+        }
+        }
+    return total;
 }
 
 
