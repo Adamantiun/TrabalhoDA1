@@ -48,7 +48,6 @@ bool Controller::readOrders(int orderNo) {
     if (ordersFile.fail()) {
         return false;
     }
-   orderDB.clear();
     string line;
     getline(ordersFile,line);
     while (!ordersFile.eof() && ordersFile.peek()!='\n') {
@@ -104,6 +103,9 @@ vector<Truck>& Controller::getTrucks() {
     return truckDB;
 }
 
+void Controller::clearOrders(){
+    orderDB.clear();
+}
 /*
 Stop& Controller::findStop(string code) {
     for(int i=0; i<stopDB.size(); i++)

@@ -121,6 +121,8 @@ public:
     void sortTruckDBforS2();
 
     static bool compareCostBenefit(const Truck &t1, const Truck &t2);
+
+    void clearOrders();
 };
 
 #endif //PROJ1_CONTROLLER_H

@@ -22,9 +22,24 @@ System::System() {
     baseMenu.setMainOps({"Staff Optimizing", "Profit Optimizing", "Express Deliveries"});
 
     while(true) {
+        controller.clearOrders();
         string orderOption = baseMenu.intInputMenu("Hello! Please select an order to process!");
+        vector<string> usedOrders;
         while(!controller.readOrders(stoi(orderOption)))
-            orderOption = baseMenu.intInputMenu("Hello! Please select an order to process!", "This order does not exists!");
+            orderOption = baseMenu.intInputMenu("Please select an order to process!", "This order does not exists!");
+        usedOrders.push_back(orderOption);
+        orderOption = baseMenu.anyInputMenu("If you would like, select another order to process!\nOr type 'C' to continue!");
+        while(orderOption!="C" && orderOption!="c"){
+            if(find(usedOrders.begin(), usedOrders.end(), orderOption)!=usedOrders.end()){
+                orderOption = baseMenu.anyInputMenu("If you would like, select another order to process!\nOr type 'C' to continue!", "This order has already been requested!");
+                continue;
+            }
+            if(!baseMenu.is_number(orderOption) || !controller.readOrders(stoi(orderOption)))
+                orderOption = baseMenu.anyInputMenu("If you would like, select another order to process!\nOr type 'C' to continue!", "Invalid Input!");
+            else{
+                orderOption = baseMenu.anyInputMenu("If you would like, select another order to process!\nOr type 'C' to continue!");
+            }
+        }
         int sceneryOption = baseMenu.printOptionsMenu(baseMenu.getMainOps(), "Please select a way to process your order");
 
         if(sceneryOption == 0){
