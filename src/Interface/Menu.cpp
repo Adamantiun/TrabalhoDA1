@@ -111,7 +111,6 @@ string Menu::askCin(bool ignore_spaces){ // replacement of the cin func , accoun
             exit(0);
     if (input == "Q" || input == "q"){
         cout << "\n \nThank you for using our system!\n \n";
-        controller->writeFiles();
         exit(0);
     }
     cin.ignore(256, '\n');

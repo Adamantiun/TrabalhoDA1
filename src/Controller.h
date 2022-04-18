@@ -15,7 +15,6 @@ class Controller{
 private:
     vector<Order> orderDB;
     vector<Truck> truckDB;
-    string userName;
 
 public:
     // Constructors
@@ -34,12 +33,6 @@ public:
     vector<Truck>& getTrucks();
 
     /**
-    * @brief Gets the userName of the Controller object.
-    * @return the userName attribute.
-    */
-    string getUsername();
-
-    /**
     * @brief Gets the orderDB of the Controller object.
     * @return the orderDB attribute.
     */
@@ -56,26 +49,6 @@ public:
     * */
     void readTrucks();
 
-    /**
-    * @brief Reads userData
-    * */
-    bool readUserData();
-
-
-
-
-    // Finds
-//    /** @brief  Returns an Stop based on the \p code.*/
-//    Stop& findStop(string code);
-//
-//    /** @brief  Returns an Line based on the \p code.*/
-//    Line& findLine(string code);
-
-
-    // Exists
-//    /** @brief  Checks for the existence of an Stop based on \p code.*/
-//    bool existsStop(string code);
-
 
     // Adds
     /** @brief  Adds a new Stop created with \p name, code, zone, latitude and longitude.*/
@@ -83,35 +56,22 @@ public:
 
     void addOrder(int id, int vol, int weight, int reward, int duration);
 
+    //Sceneries
 
-
-    // Removes
-    /** @brief  Removes an Stop based on \p ID.*/
-//    bool removeStop(string code);
-
-
-
-
-
-    //Write
-    /** @brief  Writes the .txt files upon Save&Quit*/
-    void writeFiles();
-
-    //Sets
-    /** @brief  Set userName attribute.*/
-    void setUsername(string username);
-
-    vector <Order> scenery3();
-
+    /** @brief  Processes scenery 1 and returns the trucks used.*/
     vector<Truck> scenery1();
 
-    vector<struct Truck> scenery2(int& getProfit);
+    /** @brief  Processes scenery 2 and returns the trucks used,
+     * also returns the profit through the parameter getProfit.*/
+    vector<Truck> scenery2(int& getProfit);
+
+    /** @brief  Processes scenery 3 and returns the orders to be shipped ordered,
+     * also returns the average delivery time through the parameter getMeanTime*/
+    vector <Order> scenery3(int& getMeanTime);
+
+
 
     double deviation(int rank1, int rank2);
-
-  //  int processTruck(Truck truck);
-
-    int fu(int ind, int weight, int vol);
 
     int processTruck(Truck &truck);
 

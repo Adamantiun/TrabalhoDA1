@@ -52,15 +52,16 @@ System::System() {
             baseMenu.singleInputScreen(getPrintableScenery2(trucksVec, totalProfit));
         }
         if(sceneryOption == 2){
-            vector<Order> ordersVec = controller.scenery3();
-            baseMenu.singleInputScreen(getPrintableScenery3(ordersVec));
+            int meanTime = 0;
+            vector<Order> ordersVec = controller.scenery3(meanTime);
+            baseMenu.singleInputScreen(getPrintableScenery3(ordersVec, meanTime));
         }
 
         if (orderOption == "x") break;
     }
 }
 
-string System::getPrintableScenery3(const std::vector<Order>& orders) {
+string System::getPrintableScenery3(const std::vector<Order>& orders, const int meanTime) {
     string ret = "Here are the Orders, by ID, arranged for delivery:\n";
     string line = "  ";
     for(auto o : orders){
@@ -71,7 +72,7 @@ string System::getPrintableScenery3(const std::vector<Order>& orders) {
         line += to_string(o.getId()) + ", ";
     }
     line.resize(line.size()-2);
-    ret += line;
+    ret += line + "\nAverage delivery time estimated: " + to_string(meanTime);
     return ret;
 }
 

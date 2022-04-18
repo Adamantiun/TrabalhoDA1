@@ -68,28 +68,6 @@ bool Controller::readOrders(int orderNo) {
     return true;
 }
 
-
-bool Controller::readUserData() {
-    /*
-    ifstream userFile;
-    userFile.open("../src/dataset/userData.txt");
-    if (userFile.fail()) {
-        return false;
-    }
-    char buf[256];
-    userFile.getline(buf, 100, '\n');
-    userName = buf;
-    userFile.getline(buf, 100, '\n');
-    walkingFactor = atoi(buf);
-    userFile.getline(buf, 100, '\n');
-    maxWalingDistance = atoi(buf);
-
-    userFile.close();
-     */
-    return true;
-
-}
-
 Controller::~Controller(){
     truckDB.clear();
     orderDB.clear();
@@ -106,27 +84,6 @@ vector<Truck>& Controller::getTrucks() {
 void Controller::clearOrders(){
     orderDB.clear();
 }
-/*
-Stop& Controller::findStop(string code) {
-    for(int i=0; i<stopDB.size(); i++)
-        if(stopDB[i].getCode() == code)
-            return stopDB[i];
-    Stop* nill = new Stop();
-    return *nill;
-}
-
-Line& Controller::findLine(string code) {
-    for(auto& line :linesDB){
-        if(line.getCode()==code)
-            return line;
-    }
-    Line* nill=NULL;
-    return *nill;
-}
-
-
-*/
-
 
 
 void Controller::addTruck(int id,int volMax, int weightMax, int cost) {
@@ -139,90 +96,27 @@ void Controller::addOrder(int id, int vol, int weight, int reward, int duration)
     orderDB.push_back(order);
 }
 
-/*
-bool Controller::removeStop(string code) {
-    for(auto stop : stopDB);
-    vector<Stop>::iterator it;
-    for(it = stopDB.begin(); it<stopDB.end(); it++)
-        if(it->getCode()==code){
-            stopDB.erase(it);
-            return true;
-        }
-    return false;
-}
-*/
-
-
-
-
-
-
-
-string Controller::getUsername(){
-    return userName;
-}
-
-
-
-void Controller::writeFiles() {
-    ofstream userFile;
-    userFile.open("../src/dataset/userData.txt");
-    userFile << userName << "\n" ;
-}
-
-void Controller::setUsername(string username) {
-    this->userName = username;
-}
-
-
-vector<Order> Controller::scenery3(){
+vector<Order> Controller::scenery3(int& getMeanTime){
     vector<Order> res;
     vector<Order> aux = orderDB;
     sort(aux.begin(),aux.end(), [](const Order &a, const Order &b) {
         return a.getDuration() < b.getDuration();});
     int total=0;
     int time=28800;
-    for(int i=0; i<aux.size(); i++){
+    getMeanTime = 0;
+    int i;
+    for(i=0; i<aux.size(); i++){
         if(total + aux[i].getDuration() >time){break;}
         total+=aux[i].getDuration();
+        getMeanTime += total;
         res.push_back(aux[i]);
     }
+    getMeanTime/=i;
     return res;
 }
 
 
-/*
-int Controller::scenery1(){
-    //FIRST FIT
-
-    vector<Order> orderdb = orderDB;
-    vector<Order> orderdbyVol = orderDB;
-    vector<Truck> aux2 = truckDB;
-
-    int n = orderdb.size();
-    int j = 0;
-    set<int> a;
-    set<int> trucksIDS;
-    for (int i = 0; i < n; i++) {
-        // If this item can't f it in current bin
-        if (orderdbyVol[i].getWeight() > aux2[j].getWeightMax() ||orderdbyVol[i].getVol() > aux2[j].getVolMax()  ) {
-            j++;
-        }
-        else {
-            a.insert(j);
-            trucksIDS.insert(aux2[j].getId());
-            aux2[j].setWeightMax(aux2[j].getWeightMax() - orderdbyVol[i].getWeight()); //mudo o tamanho
-            aux2[j].setVolMax(aux2[j].getVolMax() - orderdbyVol[i].getVol()); //mudo o VOL
-            j = 0;
-        }
-    }
-    return a.size();
-
-}
-*/
-
 double Controller::deviation(int rank1,int rank2){
-
     if((rank1 + rank2) == 0 ) return 1;
     double media = (rank1+rank2)/2.0;
     double deviation = 0;
@@ -366,9 +260,8 @@ int Controller::processTruck(Truck &truck){
 }
 void Controller::processSelectedOrders(vector<vector<vector<int>>> &dp, Truck &truck) {
     ///This function processes the orders to be added to the truck and taken for the orders DB
-    //cout << "Selected weights:";
     int totalProfit = dp[orderDB.size() - 1][truck.getWeightMax()][truck.getVolMax()];
-    //cout<<endl<<totalProfit<<endl;
+
     for (int i = orderDB.size() - 1; i > 0; i--) {
         if (totalProfit != dp[i - 1][ truck.getWeightMax()][truck.getVolMax()]) {
             //cout << " " << orderDB[i].getWeight()<<" || "<<orderDB[i].getVol();
@@ -384,12 +277,9 @@ void Controller::processSelectedOrders(vector<vector<vector<int>>> &dp, Truck &t
 
 
     if (totalProfit != 0) {
-        //cout << " " << orderDB[0].getWeight() << " || "<<orderDB[0].getVol();
         truckDB[0].addOrder(orderDB[0]);
         orderDB.erase(orderDB.begin());
-
     }
-    //cout << "" << endl;
 }
 
 void Controller :: sortTruckDBforS2(){
