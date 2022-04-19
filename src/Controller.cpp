@@ -11,6 +11,7 @@
 #include <algorithm>
 #include <xmath.h>
 #include <functional>
+#include <chrono>
 
 
 Controller::Controller() {
@@ -291,6 +292,9 @@ bool Controller::compareCostBenefit(const Truck &t1, const Truck &t2) {
 }
 
 vector<Truck> Controller::scenery2(int& getProfit){
+    //chrono::steady_clock sc;
+    //auto start = sc.now();
+
     sortTruckDBforS2(); //sort based on volume*weight/cost
 
     int total = 0; //profit counter
@@ -320,7 +324,17 @@ vector<Truck> Controller::scenery2(int& getProfit){
         i++;
     }
     getProfit = total; // setting given int as Total profit to be shown to user
+
+    //auto end = sc.now();
+
+    //auto time_span = static_cast<chrono::duration<double>>(end - start);
+    //cout<<"Operation took: "<<time_span.count()<<" seconds !!!\n";
     return usedTrucks;
+}
+
+void Controller::clearTrucks() {
+    for(auto &t: truckDB)
+        t.emptyTruck();
 }
 
 

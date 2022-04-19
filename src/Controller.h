@@ -83,6 +83,8 @@ public:
     static bool compareCostBenefit(const Truck &t1, const Truck &t2);
 
     void clearOrders();
+
+    void clearTrucks();
 };
 
 #endif //PROJ1_CONTROLLER_H

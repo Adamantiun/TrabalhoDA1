@@ -23,6 +23,7 @@ System::System() {
 
     while(true) {
         controller.clearOrders();
+        controller.clearTrucks();
         string orderOption = baseMenu.intInputMenu("Hello! Please select an order to process!");
         vector<string> usedOrders;
         while(!controller.readOrders(stoi(orderOption)))
