@@ -58,3 +58,8 @@
 7	3293	6720787674965823	CMakeFiles/TrabalhoDA1.dir/src/Interface/System.cpp.obj	2ed69b2077959333
 60	4426	6720787686371163	CMakeFiles/TrabalhoDA1.dir/src/Controller.cpp.obj	93bd4cc28722ee6a
 4426	5429	6720787695783212	TrabalhoDA1.exe	881f241a1590c597
+5	1729	6720809109229325	CMakeFiles/TrabalhoDA1.dir/main.cpp.obj	ae6aafcc0461a12b
+41	1956	6720809111787456	CMakeFiles/TrabalhoDA1.dir/src/Interface/Menu.cpp.obj	dfb9c7b3243a26aa
+35	2623	6720809118429062	CMakeFiles/TrabalhoDA1.dir/src/Interface/System.cpp.obj	2ed69b2077959333
+67	3694	6720809128501957	CMakeFiles/TrabalhoDA1.dir/src/Controller.cpp.obj	93bd4cc28722ee6a
+3694	9222	6720809159717950	TrabalhoDA1.exe	881f241a1590c597
