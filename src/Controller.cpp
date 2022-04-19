@@ -19,6 +19,7 @@ Controller::Controller() {
 }
 
 void Controller::readTrucks() {
+    truckDB.clear();
     ifstream trucksFile;
     trucksFile.open("../src/Data/trucks");
     if (trucksFile.fail()) {
@@ -292,8 +293,8 @@ bool Controller::compareCostBenefit(const Truck &t1, const Truck &t2) {
 }
 
 vector<Truck> Controller::scenery2(int& getProfit){
-    //chrono::steady_clock sc;
-    //auto start = sc.now();
+    chrono::steady_clock sc;
+    auto start = sc.now();
 
     sortTruckDBforS2(); //sort based on volume*weight/cost
 
@@ -325,10 +326,10 @@ vector<Truck> Controller::scenery2(int& getProfit){
     }
     getProfit = total; // setting given int as Total profit to be shown to user
 
-    //auto end = sc.now();
+    auto end = sc.now();
 
-    //auto time_span = static_cast<chrono::duration<double>>(end - start);
-    //cout<<"Operation took: "<<time_span.count()<<" seconds !!!\n";
+    auto time_span = static_cast<chrono::duration<double>>(end - start);
+    cout<<"Operation took: "<<time_span.count()<<" seconds !!!\n";
     return usedTrucks;
 }
 
