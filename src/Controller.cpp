@@ -99,6 +99,8 @@ void Controller::addOrder(int id, int vol, int weight, int reward, int duration)
 }
 
 vector<Order> Controller::scenery3(int& getMeanTime){
+    chrono::steady_clock sc;
+    auto start = sc.now();
     vector<Order> res;
     vector<Order> aux = orderDB;
     sort(aux.begin(),aux.end(), [](const Order &a, const Order &b) {
@@ -114,6 +116,10 @@ vector<Order> Controller::scenery3(int& getMeanTime){
         res.push_back(aux[i]);
     }
     getMeanTime/=i;
+    auto end = sc.now();
+
+    auto time_span = static_cast<chrono::duration<double>>(end - start);
+    cout<<"Operation took: "<<time_span.count()<<" seconds !!!\n";
     return res;
 }
 
@@ -127,6 +133,8 @@ double Controller::deviation(int rank1,int rank2){
     return deviation;
 }
 vector<Truck> Controller::scenery1(){
+    chrono::steady_clock sc;
+    auto start = sc.now();
     //FIRST FIT
 
     //*********************************************** ORDENACAO DAS ORDERS********************************************
@@ -216,6 +224,12 @@ vector<Truck> Controller::scenery1(){
     for(auto x:a){
         trucksUsed.push_back(truckbyVol[x]);
     }
+
+    auto end = sc.now();
+
+    auto time_span = static_cast<chrono::duration<double>>(end - start);
+    cout<<"Operation took: "<<time_span.count()<<" seconds !!!\n";
+
     return trucksUsed;
 }
 
