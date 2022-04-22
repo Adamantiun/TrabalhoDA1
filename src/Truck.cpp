@@ -97,5 +97,13 @@ void Truck::emptyTruck() {
     orderss.clear();
 }
 
+int Truck::getRankingCost() const {
+    return RankingCost;
+}
+
+void Truck::setRankingCost(int rankingCost) {
+    RankingCost = rankingCost;
+}
+
 
 

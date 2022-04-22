@@ -18,14 +18,19 @@ private:
     int weightMax;
     int cost;
     int RankingWei;
+    int RankingCost;
     vector<Order> ordersInside;
     set<Order> orderss;
+    int RankingVol;
+
 public:
+    int getRankingCost() const;
+
+    void setRankingCost(int rankingCost);
     const vector<Order> &getOrdersInside() const;
 
     void setOrdersInside(const vector<Order> &ordersInside);
 
-public:
     int getRankingWei() const;
 
     void setRankingWei(int rankingWei);
@@ -34,8 +39,6 @@ public:
 
     void setRankingVol(int rankingVol);
 
-private:
-    int RankingVol;
 
 public:
     //Constructors

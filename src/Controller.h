@@ -70,12 +70,19 @@ public:
     vector <Order> scenery3(int& getMeanTime);
 
 
-
     double deviation(int rank1, int rank2);
-
+    /**
+     *
+     * @param truck
+     * @return
+     */
     int processTruck(Truck &truck);
 
-
+    /**
+     *
+     * @param dp x
+     * @param truck
+     */
     void processSelectedOrders(vector<vector<vector<int>>> &dp, Truck &truck);
 
     void sortTruckDBforS2();
@@ -85,6 +92,16 @@ public:
     void clearOrders();
 
     void clearTrucks();
+
+    void SetOrderByWeight(vector<Order> &orderdb);
+
+    void SetOrderByVolume(vector<Order> &orderdbyVol);
+
+    void SetTruckRankingWeight(vector<Truck> &truckdb);
+
+    void SetTruckRankingVol(vector<Truck> &truckdb);
+
+    void SetTruckRankingCost(vector<Truck> &truckdb);
 };
 
 #endif //PROJ1_CONTROLLER_H
