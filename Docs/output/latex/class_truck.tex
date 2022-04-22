@@ -1,0 +1,261 @@
+\hypertarget{class_truck}{}\doxysection{Truck Class Reference}
+\label{class_truck}\index{Truck@{Truck}}
+
+
+{\ttfamily \#include $<$Truck.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_truck_ae3d5eb489103890125dffb98af55c567}{get\+Ranking\+Cost}} () const
+\item 
+void \mbox{\hyperlink{class_truck_a82e3f2f7492a2a085a86bf37b390c051}{set\+Ranking\+Cost}} (int ranking\+Cost)
+\item 
+const vector$<$ \mbox{\hyperlink{class_order}{Order}} $>$ \& \mbox{\hyperlink{class_truck_a50034c713781d5542f5fd8526f366506}{get\+Orders\+Inside}} () const
+\item 
+void \mbox{\hyperlink{class_truck_a03c2525b1d4c1625f4074c7172d029a6}{set\+Orders\+Inside}} (const vector$<$ \mbox{\hyperlink{class_order}{Order}} $>$ \&orders\+Inside)
+\item 
+int \mbox{\hyperlink{class_truck_ae52bbdeda65a8259121661db5c8a8eab}{get\+Ranking\+Wei}} () const
+\item 
+void \mbox{\hyperlink{class_truck_a6e603fcad92eac49d9b4608c270862bb}{set\+Ranking\+Wei}} (int ranking\+Wei)
+\item 
+int \mbox{\hyperlink{class_truck_a98d262d5d376898317d156fb1a804df4}{get\+Ranking\+Vol}} () const
+\item 
+void \mbox{\hyperlink{class_truck_a5fef5a1cb71692cae441c49f3d8f2148}{set\+Ranking\+Vol}} (int ranking\+Vol)
+\item 
+\mbox{\hyperlink{class_truck_a87e358bca8fe34e6299c6ff233afb08b}{Truck}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_truck_a84c6a4aa26078a3ecf7d643d4fd59156}{Truck}} (const int \&id, const int \&vol\+Max, const int \&weight\+Max, const int \&cost)
+\begin{DoxyCompactList}\small\item\em Received the necessary attributes to create a \mbox{\hyperlink{class_order}{Order}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_truck_afe887186d0490451a8ce4a3ef433dee3}{$\sim$\+Truck}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+const int \& \mbox{\hyperlink{class_truck_a654069891819ec6cbed2ac38d12a81aa}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Get id attribute. \end{DoxyCompactList}\item 
+const int \& \mbox{\hyperlink{class_truck_ad00b3984884b6db756d554bc4653aa18}{get\+Vol\+Max}} () const
+\begin{DoxyCompactList}\small\item\em Get vol\+Max attribute. \end{DoxyCompactList}\item 
+const int \& \mbox{\hyperlink{class_truck_a65c84ab33da1fb408e4f1e37f2775f64}{get\+Weight\+Max}} () const
+\begin{DoxyCompactList}\small\item\em Get weight\+Max attribute. \end{DoxyCompactList}\item 
+const int \& \mbox{\hyperlink{class_truck_a7125bed3c497b358ea7e367b4dd04b90}{get\+Cost}} () const
+\begin{DoxyCompactList}\small\item\em Get cost attribute. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_truck_a1af2e1568e9a1eaabe701ea86e0941a6}{set\+Id}} (const int \&id)
+\begin{DoxyCompactList}\small\item\em Set id attribute. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_truck_a33a9f42930220e1f845bdcf9e9e00202}{set\+Vol\+Max}} (const int \&vol\+Max)
+\begin{DoxyCompactList}\small\item\em Set vol\+Max attribute. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_truck_a759002ca97fae280a5447a36a36e5bb3}{set\+Weight\+Max}} (const int \&weight\+Max)
+\begin{DoxyCompactList}\small\item\em Set weight\+Max attribute. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_truck_af74dc6d24223ff965009248b31eaf3e2}{set\+Cost}} (const int \&cost)
+\begin{DoxyCompactList}\small\item\em Set cost attribute. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_truck_a55db434eeb582074e166444783c157aa}{empty\+Truck}} ()
+\begin{DoxyCompactList}\small\item\em Empties truck\textquotesingle{}s orders. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_truck_a2d4fb279904ab6da20be480f9b7fc261}{add\+Order}} (\mbox{\hyperlink{class_order}{Order}} \&order)
+\item 
+void \mbox{\hyperlink{class_truck_aa4a5c8c206b9811e79ce4dbe4b1e7dd3}{add}} (\mbox{\hyperlink{class_order}{Order}} \&order)
+\item 
+bool \mbox{\hyperlink{class_truck_ab3f6d8bebef6ccfc9737684eafade038}{operator$<$}} (const \mbox{\hyperlink{class_truck}{Truck}} \&o)
+\item 
+bool \mbox{\hyperlink{class_truck_a0173e9f4bc32e060e64ea3f4562190f4}{operator==}} (const \mbox{\hyperlink{class_truck}{Truck}} \&o)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_truck_a87e358bca8fe34e6299c6ff233afb08b}\label{class_truck_a87e358bca8fe34e6299c6ff233afb08b}} 
+\index{Truck@{Truck}!Truck@{Truck}}
+\index{Truck@{Truck}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{Truck()}{Truck()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Truck\+::\+Truck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{class_truck_a84c6a4aa26078a3ecf7d643d4fd59156}\label{class_truck_a84c6a4aa26078a3ecf7d643d4fd59156}} 
+\index{Truck@{Truck}!Truck@{Truck}}
+\index{Truck@{Truck}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{Truck()}{Truck()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Truck\+::\+Truck (\begin{DoxyParamCaption}\item[{const int \&}]{id,  }\item[{const int \&}]{vol\+Max,  }\item[{const int \&}]{weight\+Max,  }\item[{const int \&}]{cost }\end{DoxyParamCaption})}
+
+
+
+Received the necessary attributes to create a \mbox{\hyperlink{class_order}{Order}} object. 
+
+\mbox{\Hypertarget{class_truck_afe887186d0490451a8ce4a3ef433dee3}\label{class_truck_afe887186d0490451a8ce4a3ef433dee3}} 
+\index{Truck@{Truck}!````~Truck@{$\sim$Truck}}
+\index{````~Truck@{$\sim$Truck}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{$\sim$Truck()}{~Truck()}}
+{\footnotesize\ttfamily Truck\+::$\sim$\+Truck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_truck_aa4a5c8c206b9811e79ce4dbe4b1e7dd3}\label{class_truck_aa4a5c8c206b9811e79ce4dbe4b1e7dd3}} 
+\index{Truck@{Truck}!add@{add}}
+\index{add@{add}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Truck\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_order}{Order}} \&}]{order }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_truck_a2d4fb279904ab6da20be480f9b7fc261}\label{class_truck_a2d4fb279904ab6da20be480f9b7fc261}} 
+\index{Truck@{Truck}!addOrder@{addOrder}}
+\index{addOrder@{addOrder}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{addOrder()}{addOrder()}}
+{\footnotesize\ttfamily void Truck\+::add\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_order}{Order}} \&}]{order }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_truck_a55db434eeb582074e166444783c157aa}\label{class_truck_a55db434eeb582074e166444783c157aa}} 
+\index{Truck@{Truck}!emptyTruck@{emptyTruck}}
+\index{emptyTruck@{emptyTruck}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{emptyTruck()}{emptyTruck()}}
+{\footnotesize\ttfamily void Truck\+::empty\+Truck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Empties truck\textquotesingle{}s orders. 
+
+\mbox{\Hypertarget{class_truck_a7125bed3c497b358ea7e367b4dd04b90}\label{class_truck_a7125bed3c497b358ea7e367b4dd04b90}} 
+\index{Truck@{Truck}!getCost@{getCost}}
+\index{getCost@{getCost}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily const int \& Truck\+::get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get cost attribute. 
+
+\mbox{\Hypertarget{class_truck_a654069891819ec6cbed2ac38d12a81aa}\label{class_truck_a654069891819ec6cbed2ac38d12a81aa}} 
+\index{Truck@{Truck}!getId@{getId}}
+\index{getId@{getId}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily const int \& Truck\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get id attribute. 
+
+\mbox{\Hypertarget{class_truck_a50034c713781d5542f5fd8526f366506}\label{class_truck_a50034c713781d5542f5fd8526f366506}} 
+\index{Truck@{Truck}!getOrdersInside@{getOrdersInside}}
+\index{getOrdersInside@{getOrdersInside}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{getOrdersInside()}{getOrdersInside()}}
+{\footnotesize\ttfamily const vector$<$ \mbox{\hyperlink{class_order}{Order}} $>$ \& Truck\+::get\+Orders\+Inside (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_truck_ae3d5eb489103890125dffb98af55c567}\label{class_truck_ae3d5eb489103890125dffb98af55c567}} 
+\index{Truck@{Truck}!getRankingCost@{getRankingCost}}
+\index{getRankingCost@{getRankingCost}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{getRankingCost()}{getRankingCost()}}
+{\footnotesize\ttfamily int Truck\+::get\+Ranking\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_truck_a98d262d5d376898317d156fb1a804df4}\label{class_truck_a98d262d5d376898317d156fb1a804df4}} 
+\index{Truck@{Truck}!getRankingVol@{getRankingVol}}
+\index{getRankingVol@{getRankingVol}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{getRankingVol()}{getRankingVol()}}
+{\footnotesize\ttfamily int Truck\+::get\+Ranking\+Vol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_truck_ae52bbdeda65a8259121661db5c8a8eab}\label{class_truck_ae52bbdeda65a8259121661db5c8a8eab}} 
+\index{Truck@{Truck}!getRankingWei@{getRankingWei}}
+\index{getRankingWei@{getRankingWei}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{getRankingWei()}{getRankingWei()}}
+{\footnotesize\ttfamily int Truck\+::get\+Ranking\+Wei (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_truck_ad00b3984884b6db756d554bc4653aa18}\label{class_truck_ad00b3984884b6db756d554bc4653aa18}} 
+\index{Truck@{Truck}!getVolMax@{getVolMax}}
+\index{getVolMax@{getVolMax}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{getVolMax()}{getVolMax()}}
+{\footnotesize\ttfamily const int \& Truck\+::get\+Vol\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get vol\+Max attribute. 
+
+\mbox{\Hypertarget{class_truck_a65c84ab33da1fb408e4f1e37f2775f64}\label{class_truck_a65c84ab33da1fb408e4f1e37f2775f64}} 
+\index{Truck@{Truck}!getWeightMax@{getWeightMax}}
+\index{getWeightMax@{getWeightMax}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{getWeightMax()}{getWeightMax()}}
+{\footnotesize\ttfamily const int \& Truck\+::get\+Weight\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get weight\+Max attribute. 
+
+\mbox{\Hypertarget{class_truck_ab3f6d8bebef6ccfc9737684eafade038}\label{class_truck_ab3f6d8bebef6ccfc9737684eafade038}} 
+\index{Truck@{Truck}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Truck\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_truck}{Truck}} \&}]{o }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_truck_a0173e9f4bc32e060e64ea3f4562190f4}\label{class_truck_a0173e9f4bc32e060e64ea3f4562190f4}} 
+\index{Truck@{Truck}!operator==@{operator==}}
+\index{operator==@{operator==}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Truck\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_truck}{Truck}} \&}]{o }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_truck_af74dc6d24223ff965009248b31eaf3e2}\label{class_truck_af74dc6d24223ff965009248b31eaf3e2}} 
+\index{Truck@{Truck}!setCost@{setCost}}
+\index{setCost@{setCost}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{setCost()}{setCost()}}
+{\footnotesize\ttfamily void Truck\+::set\+Cost (\begin{DoxyParamCaption}\item[{const int \&}]{cost }\end{DoxyParamCaption})}
+
+
+
+Set cost attribute. 
+
+\mbox{\Hypertarget{class_truck_a1af2e1568e9a1eaabe701ea86e0941a6}\label{class_truck_a1af2e1568e9a1eaabe701ea86e0941a6}} 
+\index{Truck@{Truck}!setId@{setId}}
+\index{setId@{setId}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily void Truck\+::set\+Id (\begin{DoxyParamCaption}\item[{const int \&}]{id }\end{DoxyParamCaption})}
+
+
+
+Set id attribute. 
+
+\mbox{\Hypertarget{class_truck_a03c2525b1d4c1625f4074c7172d029a6}\label{class_truck_a03c2525b1d4c1625f4074c7172d029a6}} 
+\index{Truck@{Truck}!setOrdersInside@{setOrdersInside}}
+\index{setOrdersInside@{setOrdersInside}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{setOrdersInside()}{setOrdersInside()}}
+{\footnotesize\ttfamily void Truck\+::set\+Orders\+Inside (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{class_order}{Order}} $>$ \&}]{orders\+Inside }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_truck_a82e3f2f7492a2a085a86bf37b390c051}\label{class_truck_a82e3f2f7492a2a085a86bf37b390c051}} 
+\index{Truck@{Truck}!setRankingCost@{setRankingCost}}
+\index{setRankingCost@{setRankingCost}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{setRankingCost()}{setRankingCost()}}
+{\footnotesize\ttfamily void Truck\+::set\+Ranking\+Cost (\begin{DoxyParamCaption}\item[{int}]{ranking\+Cost }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_truck_a5fef5a1cb71692cae441c49f3d8f2148}\label{class_truck_a5fef5a1cb71692cae441c49f3d8f2148}} 
+\index{Truck@{Truck}!setRankingVol@{setRankingVol}}
+\index{setRankingVol@{setRankingVol}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{setRankingVol()}{setRankingVol()}}
+{\footnotesize\ttfamily void Truck\+::set\+Ranking\+Vol (\begin{DoxyParamCaption}\item[{int}]{ranking\+Vol }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_truck_a6e603fcad92eac49d9b4608c270862bb}\label{class_truck_a6e603fcad92eac49d9b4608c270862bb}} 
+\index{Truck@{Truck}!setRankingWei@{setRankingWei}}
+\index{setRankingWei@{setRankingWei}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{setRankingWei()}{setRankingWei()}}
+{\footnotesize\ttfamily void Truck\+::set\+Ranking\+Wei (\begin{DoxyParamCaption}\item[{int}]{ranking\+Wei }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_truck_a33a9f42930220e1f845bdcf9e9e00202}\label{class_truck_a33a9f42930220e1f845bdcf9e9e00202}} 
+\index{Truck@{Truck}!setVolMax@{setVolMax}}
+\index{setVolMax@{setVolMax}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{setVolMax()}{setVolMax()}}
+{\footnotesize\ttfamily void Truck\+::set\+Vol\+Max (\begin{DoxyParamCaption}\item[{const int \&}]{vol\+Max }\end{DoxyParamCaption})}
+
+
+
+Set vol\+Max attribute. 
+
+\mbox{\Hypertarget{class_truck_a759002ca97fae280a5447a36a36e5bb3}\label{class_truck_a759002ca97fae280a5447a36a36e5bb3}} 
+\index{Truck@{Truck}!setWeightMax@{setWeightMax}}
+\index{setWeightMax@{setWeightMax}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{setWeightMax()}{setWeightMax()}}
+{\footnotesize\ttfamily void Truck\+::set\+Weight\+Max (\begin{DoxyParamCaption}\item[{const int \&}]{weight\+Max }\end{DoxyParamCaption})}
+
+
+
+Set weight\+Max attribute. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/josea/\+Git\+Trab/\+DA/trabda2/\+Trabalho\+DA1/src/\mbox{\hyperlink{_truck_8h}{Truck.\+h}}\item 
+C\+:/\+Users/josea/\+Git\+Trab/\+DA/trabda2/\+Trabalho\+DA1/src/\mbox{\hyperlink{_truck_8cpp}{Truck.\+cpp}}\end{DoxyCompactItemize}

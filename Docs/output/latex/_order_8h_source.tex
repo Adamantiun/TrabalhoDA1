@@ -1,0 +1,70 @@
+\hypertarget{_order_8h_source}{}\doxysection{Order.\+h}
+\label{_order_8h_source}\index{C:/Users/josea/GitTrab/DA/trabda2/TrabalhoDA1/src/Order.h@{C:/Users/josea/GitTrab/DA/trabda2/TrabalhoDA1/src/Order.h}}
+\mbox{\hyperlink{_order_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by 35196 on 26/03/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef TRABALHODA1\_ORDER\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define TRABALHODA1\_ORDER\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_order}{Order}} \{}
+\DoxyCodeLine{11 \textcolor{keyword}{private}:}
+\DoxyCodeLine{12     \textcolor{keywordtype}{int} id;}
+\DoxyCodeLine{13     \textcolor{keywordtype}{int} vol;}
+\DoxyCodeLine{14     \textcolor{keywordtype}{int} weight;}
+\DoxyCodeLine{15     \textcolor{keywordtype}{int} reward;}
+\DoxyCodeLine{16     \textcolor{keywordtype}{int} duration;}
+\DoxyCodeLine{17     \textcolor{keywordtype}{int} rankingVol;}
+\DoxyCodeLine{18     \textcolor{keywordtype}{int} rankingWei;}
+\DoxyCodeLine{19 \textcolor{keyword}{public}:}
+\DoxyCodeLine{20     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_order_aa016c43154e216a47e42ad40e891a684}{getRankingVol}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_order_adbc8a1c179b9884cdd8804bc26974758}{setRankingVol}}(\textcolor{keywordtype}{int} rankingVol);}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_order_af3cf4ca6c4d702dc6042e73d2562a3ea}{getRankingWei}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_order_a15b5212b0d7b88db3d3fcd5a184e0664}{setRankingWei}}(\textcolor{keywordtype}{int} rankingWei);}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{public}:}
+\DoxyCodeLine{29     \textcolor{comment}{//Constructors}}
+\DoxyCodeLine{31 \textcolor{comment}{}    \mbox{\hyperlink{class_order_a7b6a660b03708ed5b4e1c4a6dc2a664a}{Order}}();}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{34     \mbox{\hyperlink{class_order_a7b6a660b03708ed5b4e1c4a6dc2a664a}{Order}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\textcolor{keywordtype}{id}, \textcolor{keyword}{const} \textcolor{keywordtype}{int} \&vol, \textcolor{keyword}{const} \textcolor{keywordtype}{int} \&weight, \textcolor{keyword}{const} \textcolor{keywordtype}{int} \&reward, \textcolor{keyword}{const} \textcolor{keywordtype}{int} \&duration);}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \textcolor{comment}{//Deconstructors}}
+\DoxyCodeLine{38 \textcolor{comment}{}    \mbox{\hyperlink{class_order_a8fb25876ccbd534465f5f96ef9bb2212}{\string~Order}}();}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{comment}{//Gets}}
+\DoxyCodeLine{42 \textcolor{comment}{}    \textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\mbox{\hyperlink{class_order_abe8e7f17ddc23123b7dc1a4979ad8a50}{getId}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{45     \textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\mbox{\hyperlink{class_order_a3eebb1034213e8f098607cdb45e95778}{getVol}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{48     \textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\mbox{\hyperlink{class_order_a0faafef72a1174b4067f5eeebe83df4d}{getWeight}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{51     \textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\mbox{\hyperlink{class_order_ad41d14f04257d47587ef9cd7a4bebc55}{getReward}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{54     \textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\mbox{\hyperlink{class_order_a2dfe57ff4aeab1db3f3bd654a03e14c9}{getDuration}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     \textcolor{comment}{//Sets}}
+\DoxyCodeLine{59 \textcolor{comment}{}    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_order_ade16b949c7c89764f13b64f54af2456c}{setId}} (\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\textcolor{keywordtype}{id});}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{62     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_order_a7d35072cf4e8b718b799f32af010afd0}{setVol}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&vol);}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{65     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_order_a7bd92e2c1102ea098cb7344f284dcc4c}{setWeight}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&weight);}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{68     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_order_acfb2717e1a2185a2f2d201490e2edd45}{setReward}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&reward);}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{71     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_order_a12dbab2eda6e15a23cc036d8110d9374}{setDuration}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&duration);}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_order_a3705ac383f9efb4ff504dbc210e994b9}{operator<}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_order}{Order}}\& o) \textcolor{keyword}{const};}
+\DoxyCodeLine{74     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_order_a8fe431aaef7848f9cd4ec8173427b2d2}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_order}{Order}}\& o) \textcolor{keyword}{const};}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76 \};}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//TRABALHODA1\_ORDER\_H}}
+
+\end{DoxyCode}

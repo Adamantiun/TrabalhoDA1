@@ -70,18 +70,18 @@ public:
     vector <Order> scenery3(int& getMeanTime);
 
 
-    double deviation(int rank1, int rank2);
     /**
-     *
+     * This function is responsible for calculate the maximum profit in a single truck, it use Buttom-Up approach
+     * and Dynamic Programing
      * @param truck
-     * @return
+     * @return the total profit in this operation
      */
     int processTruck(Truck &truck);
 
     /**
-     *
-     * @param dp x
-     * @param truck
+     * Loads the information obtained in the table in the database, filling the trucks with orders.
+     * @param dp The table that contains all operations
+     * @param truck the truck used for generate the table
      */
     void processSelectedOrders(vector<vector<vector<int>>> &dp, Truck &truck);
 

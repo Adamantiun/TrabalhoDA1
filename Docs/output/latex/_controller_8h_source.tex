@@ -1,0 +1,80 @@
+\hypertarget{_controller_8h_source}{}\doxysection{Controller.\+h}
+\label{_controller_8h_source}\index{C:/Users/josea/GitTrab/DA/trabda2/TrabalhoDA1/src/Controller.h@{C:/Users/josea/GitTrab/DA/trabda2/TrabalhoDA1/src/Controller.h}}
+\mbox{\hyperlink{_controller_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{// ****************************************************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{// ******************************************* CONTROLLER\_H\_\_ *****************************************}}
+\DoxyCodeLine{3 \textcolor{comment}{// ****************************************************************************************************}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef PROJ1\_CONTROLLER\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define PROJ1\_CONTROLLER\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_truck_8h}{Truck.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_order_8h}{Order.h}}"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <set>}}
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_controller}{Controller}}\{}
+\DoxyCodeLine{15 \textcolor{keyword}{private}:}
+\DoxyCodeLine{16     vector<Order> orderDB;}
+\DoxyCodeLine{17     vector<Truck> truckDB;}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{public}:}
+\DoxyCodeLine{20     \textcolor{comment}{// Constructors}}
+\DoxyCodeLine{22 \textcolor{comment}{}    \mbox{\hyperlink{class_controller_a95c56822d667e94b031451729ce069a9}{Controller}}();}
+\DoxyCodeLine{24     \mbox{\hyperlink{class_controller_a0ab87934c4f7a266cfdb86e0f36bc1b5}{\string~Controller}}();}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{comment}{// Gets}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 }
+\DoxyCodeLine{33     vector<Truck>\& \mbox{\hyperlink{class_controller_a0a97ccb5113fde69b46663bf14e529b9}{getTrucks}}();}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{39     vector<Order> \mbox{\hyperlink{class_controller_abec8b5925783347a366ce7b5d6ccee55}{getOrders}}();}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{comment}{//Reads}}
+\DoxyCodeLine{45 \textcolor{comment}{}    \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_controller_a5141a46dd52c59f2bcc9a211aaed4d0b}{readOrders}}(\textcolor{keywordtype}{int} orderNo);}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_a13ef5f33a9ce80c704e8366775c43aeb}{readTrucks}}();}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     \textcolor{comment}{// Adds}}
+\DoxyCodeLine{55 \textcolor{comment}{}    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_aaa30b31ee5b88578e87028e3a007c98b}{addTruck}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{int} volMax, \textcolor{keywordtype}{int} weightMax, \textcolor{keywordtype}{int} cost);}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_af1432b5dd4a8d18f8c7108cf395befcb}{addOrder}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{int} vol, \textcolor{keywordtype}{int} weight, \textcolor{keywordtype}{int} reward, \textcolor{keywordtype}{int} duration);}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59     \textcolor{comment}{//Sceneries}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{62     vector<Truck> \mbox{\hyperlink{class_controller_a60a0779ed1b7e4cdb3f18c6bef6f7cc1}{scenery1}}();}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{66     vector<Truck> \mbox{\hyperlink{class_controller_a41b84e53b22012007c8931adad1500d0}{scenery2}}(\textcolor{keywordtype}{int}\& getProfit);}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{70     vector <Order> \mbox{\hyperlink{class_controller_a5ba74b4ba95b775b837a8e99e036917b}{scenery3}}(\textcolor{keywordtype}{int}\& getMeanTime);}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 }
+\DoxyCodeLine{79     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_controller_af02e8c5425784e3252c7b16b7ff750fd}{processTruck}}(\mbox{\hyperlink{class_truck}{Truck}} \&truck);}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{86     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_a628d554ef6e61861184af3f151d0444b}{processSelectedOrders}}(vector<vector<vector<int>>> \&dp, \mbox{\hyperlink{class_truck}{Truck}} \&truck);}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_a1d3671a0cb49770f1dd4673faef9702c}{sortTruckDBforS2}}();}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_controller_a8a44567fae13c0c3cf5eb18d42ffc9b3}{compareCostBenefit}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_truck}{Truck}} \&t1, \textcolor{keyword}{const} \mbox{\hyperlink{class_truck}{Truck}} \&t2);}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_abd55be521a5525f6d905b6c163f999a7}{clearOrders}}();}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_a19b7ae797553501cbae5aef999697693}{clearTrucks}}();}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_ad8eadfb2bc1a825320245c4255a46c65}{SetOrderByWeight}}(vector<Order> \&orderdb);}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_adbf0a28ba4c62c9943b8d15ec644cece}{SetOrderByVolume}}(vector<Order> \&orderdbyVol);}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_ab7061e80348e747097dcab4cc306311a}{SetTruckRankingWeight}}(vector<Truck> \&truckdb);}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_a293028914bfdcbc98b7c2d0961138c69}{SetTruckRankingVol}}(vector<Truck> \&truckdb);}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_ac8d333e90f5eed4a9ac03f9ede7044dc}{SetTruckRankingCost}}(vector<Truck> \&truckdb);}
+\DoxyCodeLine{105 \};}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJ1\_CONTROLLER\_H}}
+
+\end{DoxyCode}

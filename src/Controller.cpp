@@ -118,15 +118,6 @@ vector<Order> Controller::scenery3(int& getMeanTime){
 }
 
 
-double Controller::deviation(int rank1,int rank2){
-    if((rank1 + rank2) == 0 ) return 1;
-    double media = (rank1+rank2)/2.0;
-    double deviation = 0;
-    deviation += pow(rank1 - media, 2);
-    deviation += pow(rank2 - media, 2);
-    return deviation;
-}
-
 
 void Controller::SetOrderByWeight(vector<Order> &orderdb){
     auto cmp = [] (Order order1, Order order2){ return order1.getWeight()>order2.getWeight();};

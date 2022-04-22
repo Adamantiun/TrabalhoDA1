@@ -1,0 +1,261 @@
+\hypertarget{class_controller}{}\doxysection{Controller Class Reference}
+\label{class_controller}\index{Controller@{Controller}}
+
+
+{\ttfamily \#include $<$Controller.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_controller_a95c56822d667e94b031451729ce069a9}{Controller}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_controller_a0ab87934c4f7a266cfdb86e0f36bc1b5}{$\sim$\+Controller}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_truck}{Truck}} $>$ \& \mbox{\hyperlink{class_controller_a0a97ccb5113fde69b46663bf14e529b9}{get\+Trucks}} ()
+\begin{DoxyCompactList}\small\item\em Gets the truck\+DB of the \mbox{\hyperlink{class_controller}{Controller}} object. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_order}{Order}} $>$ \mbox{\hyperlink{class_controller_abec8b5925783347a366ce7b5d6ccee55}{get\+Orders}} ()
+\begin{DoxyCompactList}\small\item\em Gets the order\+DB of the \mbox{\hyperlink{class_controller}{Controller}} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_controller_a5141a46dd52c59f2bcc9a211aaed4d0b}{read\+Orders}} (int order\+No)
+\begin{DoxyCompactList}\small\item\em Reads orders1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controller_a13ef5f33a9ce80c704e8366775c43aeb}{read\+Trucks}} ()
+\begin{DoxyCompactList}\small\item\em Reads trucks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controller_aaa30b31ee5b88578e87028e3a007c98b}{add\+Truck}} (int id, int vol\+Max, int weight\+Max, int cost)
+\begin{DoxyCompactList}\small\item\em Adds a new Stop created with {\ttfamily name}, code, zone, latitude and longitude. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controller_af1432b5dd4a8d18f8c7108cf395befcb}{add\+Order}} (int id, int vol, int weight, int reward, int duration)
+\item 
+vector$<$ \mbox{\hyperlink{class_truck}{Truck}} $>$ \mbox{\hyperlink{class_controller_a60a0779ed1b7e4cdb3f18c6bef6f7cc1}{scenery1}} ()
+\begin{DoxyCompactList}\small\item\em Processes scenery 1 and returns the trucks used. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_truck}{Truck}} $>$ \mbox{\hyperlink{class_controller_a41b84e53b22012007c8931adad1500d0}{scenery2}} (int \&get\+Profit)
+\begin{DoxyCompactList}\small\item\em Processes scenery 2 and returns the trucks used, also returns the profit through the parameter get\+Profit. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_order}{Order}} $>$ \mbox{\hyperlink{class_controller_a5ba74b4ba95b775b837a8e99e036917b}{scenery3}} (int \&get\+Mean\+Time)
+\begin{DoxyCompactList}\small\item\em Processes scenery 3 and returns the orders to be shipped ordered, also returns the average delivery time through the parameter get\+Mean\+Time. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_controller_af02e8c5425784e3252c7b16b7ff750fd}{process\+Truck}} (\mbox{\hyperlink{class_truck}{Truck}} \&truck)
+\item 
+void \mbox{\hyperlink{class_controller_a628d554ef6e61861184af3f151d0444b}{process\+Selected\+Orders}} (vector$<$ vector$<$ vector$<$ int $>$ $>$ $>$ \&dp, \mbox{\hyperlink{class_truck}{Truck}} \&truck)
+\item 
+void \mbox{\hyperlink{class_controller_a1d3671a0cb49770f1dd4673faef9702c}{sort\+Truck\+DBfor\+S2}} ()
+\item 
+void \mbox{\hyperlink{class_controller_abd55be521a5525f6d905b6c163f999a7}{clear\+Orders}} ()
+\item 
+void \mbox{\hyperlink{class_controller_a19b7ae797553501cbae5aef999697693}{clear\+Trucks}} ()
+\item 
+void \mbox{\hyperlink{class_controller_ad8eadfb2bc1a825320245c4255a46c65}{Set\+Order\+By\+Weight}} (vector$<$ \mbox{\hyperlink{class_order}{Order}} $>$ \&orderdb)
+\item 
+void \mbox{\hyperlink{class_controller_adbf0a28ba4c62c9943b8d15ec644cece}{Set\+Order\+By\+Volume}} (vector$<$ \mbox{\hyperlink{class_order}{Order}} $>$ \&orderdby\+Vol)
+\item 
+void \mbox{\hyperlink{class_controller_ab7061e80348e747097dcab4cc306311a}{Set\+Truck\+Ranking\+Weight}} (vector$<$ \mbox{\hyperlink{class_truck}{Truck}} $>$ \&truckdb)
+\item 
+void \mbox{\hyperlink{class_controller_a293028914bfdcbc98b7c2d0961138c69}{Set\+Truck\+Ranking\+Vol}} (vector$<$ \mbox{\hyperlink{class_truck}{Truck}} $>$ \&truckdb)
+\item 
+void \mbox{\hyperlink{class_controller_ac8d333e90f5eed4a9ac03f9ede7044dc}{Set\+Truck\+Ranking\+Cost}} (vector$<$ \mbox{\hyperlink{class_truck}{Truck}} $>$ \&truckdb)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_controller_a8a44567fae13c0c3cf5eb18d42ffc9b3}{compare\+Cost\+Benefit}} (const \mbox{\hyperlink{class_truck}{Truck}} \&t1, const \mbox{\hyperlink{class_truck}{Truck}} \&t2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_controller_a95c56822d667e94b031451729ce069a9}\label{class_controller_a95c56822d667e94b031451729ce069a9}} 
+\index{Controller@{Controller}!Controller@{Controller}}
+\index{Controller@{Controller}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{Controller()}{Controller()}}
+{\footnotesize\ttfamily Controller\+::\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{class_controller_a0ab87934c4f7a266cfdb86e0f36bc1b5}\label{class_controller_a0ab87934c4f7a266cfdb86e0f36bc1b5}} 
+\index{Controller@{Controller}!````~Controller@{$\sim$Controller}}
+\index{````~Controller@{$\sim$Controller}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{$\sim$Controller()}{~Controller()}}
+{\footnotesize\ttfamily Controller\+::$\sim$\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_controller_af1432b5dd4a8d18f8c7108cf395befcb}\label{class_controller_af1432b5dd4a8d18f8c7108cf395befcb}} 
+\index{Controller@{Controller}!addOrder@{addOrder}}
+\index{addOrder@{addOrder}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{addOrder()}{addOrder()}}
+{\footnotesize\ttfamily void Controller\+::add\+Order (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{vol,  }\item[{int}]{weight,  }\item[{int}]{reward,  }\item[{int}]{duration }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_controller_aaa30b31ee5b88578e87028e3a007c98b}\label{class_controller_aaa30b31ee5b88578e87028e3a007c98b}} 
+\index{Controller@{Controller}!addTruck@{addTruck}}
+\index{addTruck@{addTruck}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{addTruck()}{addTruck()}}
+{\footnotesize\ttfamily void Controller\+::add\+Truck (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{vol\+Max,  }\item[{int}]{weight\+Max,  }\item[{int}]{cost }\end{DoxyParamCaption})}
+
+
+
+Adds a new Stop created with {\ttfamily name}, code, zone, latitude and longitude. 
+
+\mbox{\Hypertarget{class_controller_abd55be521a5525f6d905b6c163f999a7}\label{class_controller_abd55be521a5525f6d905b6c163f999a7}} 
+\index{Controller@{Controller}!clearOrders@{clearOrders}}
+\index{clearOrders@{clearOrders}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{clearOrders()}{clearOrders()}}
+{\footnotesize\ttfamily void Controller\+::clear\+Orders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_controller_a19b7ae797553501cbae5aef999697693}\label{class_controller_a19b7ae797553501cbae5aef999697693}} 
+\index{Controller@{Controller}!clearTrucks@{clearTrucks}}
+\index{clearTrucks@{clearTrucks}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{clearTrucks()}{clearTrucks()}}
+{\footnotesize\ttfamily void Controller\+::clear\+Trucks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_controller_a8a44567fae13c0c3cf5eb18d42ffc9b3}\label{class_controller_a8a44567fae13c0c3cf5eb18d42ffc9b3}} 
+\index{Controller@{Controller}!compareCostBenefit@{compareCostBenefit}}
+\index{compareCostBenefit@{compareCostBenefit}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{compareCostBenefit()}{compareCostBenefit()}}
+{\footnotesize\ttfamily bool Controller\+::compare\+Cost\+Benefit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_truck}{Truck}} \&}]{t1,  }\item[{const \mbox{\hyperlink{class_truck}{Truck}} \&}]{t2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_controller_abec8b5925783347a366ce7b5d6ccee55}\label{class_controller_abec8b5925783347a366ce7b5d6ccee55}} 
+\index{Controller@{Controller}!getOrders@{getOrders}}
+\index{getOrders@{getOrders}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{getOrders()}{getOrders()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_order}{Order}} $>$ Controller\+::get\+Orders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the order\+DB of the \mbox{\hyperlink{class_controller}{Controller}} object. 
+
+\begin{DoxyReturn}{Returns}
+the order\+DB attribute. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_controller_a0a97ccb5113fde69b46663bf14e529b9}\label{class_controller_a0a97ccb5113fde69b46663bf14e529b9}} 
+\index{Controller@{Controller}!getTrucks@{getTrucks}}
+\index{getTrucks@{getTrucks}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{getTrucks()}{getTrucks()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_truck}{Truck}} $>$ \& Controller\+::get\+Trucks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the truck\+DB of the \mbox{\hyperlink{class_controller}{Controller}} object. 
+
+\begin{DoxyReturn}{Returns}
+the truck\+DB attribute. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_controller_a628d554ef6e61861184af3f151d0444b}\label{class_controller_a628d554ef6e61861184af3f151d0444b}} 
+\index{Controller@{Controller}!processSelectedOrders@{processSelectedOrders}}
+\index{processSelectedOrders@{processSelectedOrders}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{processSelectedOrders()}{processSelectedOrders()}}
+{\footnotesize\ttfamily void Controller\+::process\+Selected\+Orders (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ vector$<$ int $>$ $>$ $>$ \&}]{dp,  }\item[{\mbox{\hyperlink{class_truck}{Truck}} \&}]{truck }\end{DoxyParamCaption})}
+
+Loads the information obtained in the table in the database, filling the trucks with orders. 
+\begin{DoxyParams}{Parameters}
+{\em dp} & The table that contains all operations \\
+\hline
+{\em truck} & the truck used for generate the table \\
+\hline
+\end{DoxyParams}
+This function processes the orders to be added to the truck and taken for the orders DB\mbox{\Hypertarget{class_controller_af02e8c5425784e3252c7b16b7ff750fd}\label{class_controller_af02e8c5425784e3252c7b16b7ff750fd}} 
+\index{Controller@{Controller}!processTruck@{processTruck}}
+\index{processTruck@{processTruck}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{processTruck()}{processTruck()}}
+{\footnotesize\ttfamily int Controller\+::process\+Truck (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_truck}{Truck}} \&}]{truck }\end{DoxyParamCaption})}
+
+This function is responsible for calculate the maximum profit in a single truck, it use Buttom-\/\+Up approach and Dynamic Programing 
+\begin{DoxyParams}{Parameters}
+{\em truck} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the total profit in this operation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_controller_a5141a46dd52c59f2bcc9a211aaed4d0b}\label{class_controller_a5141a46dd52c59f2bcc9a211aaed4d0b}} 
+\index{Controller@{Controller}!readOrders@{readOrders}}
+\index{readOrders@{readOrders}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{readOrders()}{readOrders()}}
+{\footnotesize\ttfamily bool Controller\+::read\+Orders (\begin{DoxyParamCaption}\item[{int}]{order\+No }\end{DoxyParamCaption})}
+
+
+
+Reads orders1. 
+
+\mbox{\Hypertarget{class_controller_a13ef5f33a9ce80c704e8366775c43aeb}\label{class_controller_a13ef5f33a9ce80c704e8366775c43aeb}} 
+\index{Controller@{Controller}!readTrucks@{readTrucks}}
+\index{readTrucks@{readTrucks}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{readTrucks()}{readTrucks()}}
+{\footnotesize\ttfamily void Controller\+::read\+Trucks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reads trucks. 
+
+\mbox{\Hypertarget{class_controller_a60a0779ed1b7e4cdb3f18c6bef6f7cc1}\label{class_controller_a60a0779ed1b7e4cdb3f18c6bef6f7cc1}} 
+\index{Controller@{Controller}!scenery1@{scenery1}}
+\index{scenery1@{scenery1}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{scenery1()}{scenery1()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_truck}{Truck}} $>$ Controller\+::scenery1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Processes scenery 1 and returns the trucks used. 
+
+\mbox{\Hypertarget{class_controller_a41b84e53b22012007c8931adad1500d0}\label{class_controller_a41b84e53b22012007c8931adad1500d0}} 
+\index{Controller@{Controller}!scenery2@{scenery2}}
+\index{scenery2@{scenery2}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{scenery2()}{scenery2()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_truck}{Truck}} $>$ Controller\+::scenery2 (\begin{DoxyParamCaption}\item[{int \&}]{get\+Profit }\end{DoxyParamCaption})}
+
+
+
+Processes scenery 2 and returns the trucks used, also returns the profit through the parameter get\+Profit. 
+
+\mbox{\Hypertarget{class_controller_a5ba74b4ba95b775b837a8e99e036917b}\label{class_controller_a5ba74b4ba95b775b837a8e99e036917b}} 
+\index{Controller@{Controller}!scenery3@{scenery3}}
+\index{scenery3@{scenery3}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{scenery3()}{scenery3()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_order}{Order}} $>$ Controller\+::scenery3 (\begin{DoxyParamCaption}\item[{int \&}]{get\+Mean\+Time }\end{DoxyParamCaption})}
+
+
+
+Processes scenery 3 and returns the orders to be shipped ordered, also returns the average delivery time through the parameter get\+Mean\+Time. 
+
+\mbox{\Hypertarget{class_controller_adbf0a28ba4c62c9943b8d15ec644cece}\label{class_controller_adbf0a28ba4c62c9943b8d15ec644cece}} 
+\index{Controller@{Controller}!SetOrderByVolume@{SetOrderByVolume}}
+\index{SetOrderByVolume@{SetOrderByVolume}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{SetOrderByVolume()}{SetOrderByVolume()}}
+{\footnotesize\ttfamily void Controller\+::\+Set\+Order\+By\+Volume (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{class_order}{Order}} $>$ \&}]{orderdby\+Vol }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_controller_ad8eadfb2bc1a825320245c4255a46c65}\label{class_controller_ad8eadfb2bc1a825320245c4255a46c65}} 
+\index{Controller@{Controller}!SetOrderByWeight@{SetOrderByWeight}}
+\index{SetOrderByWeight@{SetOrderByWeight}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{SetOrderByWeight()}{SetOrderByWeight()}}
+{\footnotesize\ttfamily void Controller\+::\+Set\+Order\+By\+Weight (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{class_order}{Order}} $>$ \&}]{orderdb }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_controller_ac8d333e90f5eed4a9ac03f9ede7044dc}\label{class_controller_ac8d333e90f5eed4a9ac03f9ede7044dc}} 
+\index{Controller@{Controller}!SetTruckRankingCost@{SetTruckRankingCost}}
+\index{SetTruckRankingCost@{SetTruckRankingCost}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{SetTruckRankingCost()}{SetTruckRankingCost()}}
+{\footnotesize\ttfamily void Controller\+::\+Set\+Truck\+Ranking\+Cost (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{class_truck}{Truck}} $>$ \&}]{truckdb }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_controller_a293028914bfdcbc98b7c2d0961138c69}\label{class_controller_a293028914bfdcbc98b7c2d0961138c69}} 
+\index{Controller@{Controller}!SetTruckRankingVol@{SetTruckRankingVol}}
+\index{SetTruckRankingVol@{SetTruckRankingVol}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{SetTruckRankingVol()}{SetTruckRankingVol()}}
+{\footnotesize\ttfamily void Controller\+::\+Set\+Truck\+Ranking\+Vol (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{class_truck}{Truck}} $>$ \&}]{truckdb }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_controller_ab7061e80348e747097dcab4cc306311a}\label{class_controller_ab7061e80348e747097dcab4cc306311a}} 
+\index{Controller@{Controller}!SetTruckRankingWeight@{SetTruckRankingWeight}}
+\index{SetTruckRankingWeight@{SetTruckRankingWeight}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{SetTruckRankingWeight()}{SetTruckRankingWeight()}}
+{\footnotesize\ttfamily void Controller\+::\+Set\+Truck\+Ranking\+Weight (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{class_truck}{Truck}} $>$ \&}]{truckdb }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_controller_a1d3671a0cb49770f1dd4673faef9702c}\label{class_controller_a1d3671a0cb49770f1dd4673faef9702c}} 
+\index{Controller@{Controller}!sortTruckDBforS2@{sortTruckDBforS2}}
+\index{sortTruckDBforS2@{sortTruckDBforS2}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{sortTruckDBforS2()}{sortTruckDBforS2()}}
+{\footnotesize\ttfamily void Controller\+::sort\+Truck\+DBfor\+S2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/josea/\+Git\+Trab/\+DA/trabda2/\+Trabalho\+DA1/src/\mbox{\hyperlink{_controller_8h}{Controller.\+h}}\item 
+C\+:/\+Users/josea/\+Git\+Trab/\+DA/trabda2/\+Trabalho\+DA1/src/\mbox{\hyperlink{_controller_8cpp}{Controller.\+cpp}}\end{DoxyCompactItemize}
