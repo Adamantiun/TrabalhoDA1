@@ -38,6 +38,7 @@ System::System() {
             if(!baseMenu.is_number(orderOption) || !controller.readOrders(stoi(orderOption)))
                 orderOption = baseMenu.anyInputMenu("If you would like, select another order to process!\nOr type 'C' to continue!", "Invalid Input!");
             else{
+                usedOrders.push_back(orderOption);
                 orderOption = baseMenu.anyInputMenu("If you would like, select another order to process!\nOr type 'C' to continue!");
             }
         }
