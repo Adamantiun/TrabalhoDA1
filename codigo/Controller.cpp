@@ -21,7 +21,7 @@ Controller::Controller() {
 void Controller::readTrucks() {
     truckDB.clear();
     ifstream trucksFile;
-    trucksFile.open("../src/Data/trucks");
+    trucksFile.open("../input/trucks");
     if (trucksFile.fail()) {
         cout << "This file doesn't exist!\n";
     }
@@ -46,7 +46,7 @@ void Controller::readTrucks() {
 
 bool Controller::readOrders(int orderNo) {
     ifstream ordersFile;
-    ordersFile.open("../src/Data/orders" + to_string(orderNo));
+    ordersFile.open("../input/orders" + to_string(orderNo));
     if (ordersFile.fail()) {
         return false;
     }
