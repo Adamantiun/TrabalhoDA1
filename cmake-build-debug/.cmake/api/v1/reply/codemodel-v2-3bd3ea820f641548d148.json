@@ -49,6 +49,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
+<<<<<<< Updated upstream:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-3bd3ea820f641548d148.json
 <<<<<<< Updated upstream:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-b77fca6648c614513bef.json
 		"build" : "D:/ADAM/Desktop/DA/TrabalhoDA1/TrabalhoDA1/cmake-build-debug",
 		"source" : "D:/ADAM/Desktop/DA/TrabalhoDA1/TrabalhoDA1"
@@ -56,6 +57,10 @@
 		"build" : "C:/Users/josea/GitTrab/DA/trabda2/TrabalhoDA1/cmake-build-debug",
 		"source" : "C:/Users/josea/GitTrab/DA/trabda2/TrabalhoDA1"
 >>>>>>> Stashed changes:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-3bd3ea820f641548d148.json
+=======
+		"build" : "C:/Users/josea/GitTrab/DA/trabda2/TrabalhoDA1/cmake-build-debug",
+		"source" : "C:/Users/josea/GitTrab/DA/trabda2/TrabalhoDA1"
+>>>>>>> Stashed changes:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-4808b37e1046d7f040b2.json
 	},
 	"version" : 
 	{

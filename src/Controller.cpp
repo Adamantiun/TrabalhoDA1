@@ -11,6 +11,7 @@
 #include <algorithm>
 #include <xmath.h>
 #include <functional>
+#include <chrono>
 
 
 Controller::Controller() {
@@ -125,14 +126,9 @@ double Controller::deviation(int rank1,int rank2){
     deviation += pow(rank2 - media, 2);
     return deviation;
 }
-<<<<<<< Updated upstream
-vector<Truck> Controller::scenery1(){
-    //FIRST FIT
 
-    //*********************************************** ORDENACAO DAS ORDERS********************************************
-=======
+
 void Controller::SetOrderByWeight(vector<Order> &orderdb){
->>>>>>> Stashed changes
     auto cmp = [] (Order order1, Order order2){ return order1.getWeight()>order2.getWeight();};
     sort(orderdb.begin(), orderdb.end(),cmp);
     for(int i = 0; i<orderdb.size();i++){
@@ -288,11 +284,8 @@ bool Controller::compareCostBenefit(const Truck &t1, const Truck &t2) {
 }
 
 vector<Truck> Controller::scenery2(int& getProfit){
-<<<<<<< Updated upstream
-=======
     chrono::steady_clock sc;
     auto start = sc.now();
->>>>>>> Stashed changes
     sortTruckDBforS2(); //sort based on volume*weight/cost
     int total = 0; //profit counter
     vector<Truck> usedTrucks; //used trucks, returned for interface processing
@@ -318,13 +311,11 @@ vector<Truck> Controller::scenery2(int& getProfit){
         i++;
     }
     getProfit = total; // setting given int as Total profit to be shown to user
-<<<<<<< Updated upstream
 
-=======
+
     auto end = sc.now();
     auto time_span = static_cast<chrono::duration<double>>(end - start);
     cout<<"Operation took: "<<time_span.count()<<" seconds !!!\n";
->>>>>>> Stashed changes
     return usedTrucks;
 }
 
